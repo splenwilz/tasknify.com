@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { StepCard } from "@/components/step-card"
+import Link from "next/link"
 
 export function HowItWorks() {
   const steps = [
@@ -43,9 +44,11 @@ export function HowItWorks() {
         </div>
 
         <div className="text-center">
-          <Button variant="ghost" className="rounded-full px-8 py-3 border border-slate-200 hover:bg-slate-50">
-            See the process
-          </Button>
+          <Link href="/process">
+            <Button variant="ghost" className="rounded-full cursor-pointer px-8 py-3 border border-slate-200 hover:bg-slate-50">
+              See the process
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

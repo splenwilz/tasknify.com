@@ -220,7 +220,7 @@ export default function HealthTechCaseStudy() {
 
             <Card className="p-8 border border-green-100 bg-green-50">
               <blockquote className="text-lg text-gray-700 mb-4">
-                "Taxnify delivered a platform that exceeded our expectations. Their deep understanding of healthcare
+                "Tasknify delivered a platform that exceeded our expectations. Their deep understanding of healthcare
                 compliance and technical excellence enabled us to serve patients safely and efficiently. The EHR
                 integrations alone saved us months of development time."
               </blockquote>

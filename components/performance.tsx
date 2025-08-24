@@ -1,8 +1,8 @@
 export function Performance() {
   const cards = [
     {
-      title: "Rust First",
-      description: "Critical paths in Rust for latency-sensitive workloads.",
+      title: "Performance First",
+      description: "Optimized code and architecture for latency-sensitive workloads.",
     },
     {
       title: "Ops You Can Trust",

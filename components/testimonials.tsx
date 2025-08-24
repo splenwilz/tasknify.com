@@ -4,7 +4,7 @@ export function Testimonials() {
   const testimonials = [
     {
       quote:
-        "Taxnify delivered our MVP in 5 weeks with zero downtime. Their Rust backend handles 10k+ concurrent users effortlessly.",
+        "Tasknify delivered our MVP in 5 weeks with zero downtime. Their Rust backend handles 10k+ concurrent users effortlessly.",
       author: "Alex Thompson",
       role: "CTO, FinanceFlow",
     },

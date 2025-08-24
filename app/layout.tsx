@@ -16,9 +16,9 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: "Taxnify - Fast, Scalable Software Development",
+  title: "Tasknify - Fast, Scalable Software Development",
   description:
-    "Taxnify builds fast, scalable software—so your product moves at the speed of your ambition. Rust & TypeScript, Cloud-Native, High-Scale Architectures.",
+    "Tasknify builds fast, scalable software—so your product moves at the speed of your ambition. Rust & TypeScript, Cloud-Native, High-Scale Architectures.",
     generator: 'v0.app'
 }
 

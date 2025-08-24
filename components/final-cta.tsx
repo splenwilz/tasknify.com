@@ -15,12 +15,12 @@ export function FinalCTA() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button className="bg-[#111827] hover:bg-[#0F172A] text-white rounded-full px-8 py-3 w-full sm:w-auto">
+                <Button className="bg-[#111827] cursor-pointer hover:bg-[#0F172A] text-white rounded-full px-8 py-3 w-full sm:w-auto">
                   Schedule a Call
                 </Button>
               </Link>
-              <a href="mailto:hello@taxnify.com?subject=Project Inquiry">
-                <Button variant="ghost" className="rounded-full px-8 py-3 border border-gray-300 w-full sm:w-auto">
+              <a href="mailto:hello@tasknify.com?subject=Project Inquiry">
+                <Button variant="ghost" className="rounded-full cursor-pointer px-8 py-3 border border-gray-300 w-full sm:w-auto">
                   Email us
                 </Button>
               </a>
