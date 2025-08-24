@@ -289,19 +289,19 @@ export default function ContactPage() {
                 <div className="space-y-6">
                   <Card className="p-6 border border-gray-100 shadow-sm">
                     <h3 className="text-lg font-semibold text-[#0F172A] mb-2">General Inquiries</h3>
-                    <p className="text-gray-600 mb-2">hello@taxnify.com</p>
+                    <p className="text-gray-600 mb-2">hello@tasknify.com</p>
                     <p className="text-sm text-gray-500">Response time: 24 hours</p>
                   </Card>
 
                   <Card className="p-6 border border-gray-100 shadow-sm">
                     <h3 className="text-lg font-semibold text-[#0F172A] mb-2">Technical Emergencies</h3>
-                    <p className="text-gray-600 mb-2">emergency@taxnify.com</p>
+                    <p className="text-gray-600 mb-2">emergency@tasknify.com</p>
                     <p className="text-sm text-gray-500">24/7 support for critical issues</p>
                   </Card>
 
                   <Card className="p-6 border border-gray-100 shadow-sm">
                     <h3 className="text-lg font-semibold text-[#0F172A] mb-2">Partnership Opportunities</h3>
-                    <p className="text-gray-600 mb-2">partners@taxnify.com</p>
+                    <p className="text-gray-600 mb-2">partners@tasknify.com</p>
                     <p className="text-sm text-gray-500">Strategic partnerships and collaborations</p>
                   </Card>
                 </div>
@@ -325,7 +325,7 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-[#0F172A] mb-4">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-600">Common questions about working with Taxnify</p>
+              <p className="text-xl text-gray-600">Common questions about working with Tasknify</p>
             </div>
 
             <div className="space-y-6">

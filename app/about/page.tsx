@@ -15,7 +15,7 @@ export default function AboutPage() {
               We build software that <span className="font-semibold text-emerald-600">scales</span> with your ambition
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Founded by engineers who've scaled systems at unicorn startups, Taxnify combines deep technical expertise
+              Founded by engineers who've scaled systems at unicorn startups, Tasknify combines deep technical expertise
               with startup velocity to deliver software that grows with your business.
             </p>
           </div>
@@ -33,7 +33,7 @@ export default function AboutPage() {
                   slowly for startup timelines.
                 </p>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  We founded Taxnify to bridge that gap—bringing enterprise-grade technical expertise with the speed and
+                  We founded Tasknify to bridge that gap—bringing enterprise-grade technical expertise with the speed and
                   agility that growing companies need.
                 </p>
                 <p className="text-gray-600 leading-relaxed">

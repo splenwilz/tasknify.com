@@ -219,7 +219,7 @@ export default function FinanceFlowCaseStudy() {
 
             <Card className="p-8 border border-blue-100 bg-blue-50">
               <blockquote className="text-lg text-gray-700 mb-4">
-                "Taxnify didn't just rebuild our platform – they transformed our entire approach to technology. The
+                "Tasknify didn't just rebuild our platform – they transformed our entire approach to technology. The
                 system they built handled our 20x user growth during Series B without a single outage. Their expertise
                 was crucial to our fundraising success."
               </blockquote>

@@ -1,10 +1,19 @@
 import { CheckCircle, Clock, Users, Zap, Shield, Rocket } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Our Development Process - Tasknify",
+  description: "Learn about Tasknify's proven 6-step development process. From discovery to deployment, we deliver high-quality software on time and within budget.",
+}
 
 export default function ProcessPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Header />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -265,6 +274,7 @@ export default function ProcessPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }

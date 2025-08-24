@@ -24,7 +24,7 @@ const faqs = [
   {
     id: 1,
     category: "general",
-    question: "What types of projects does Taxnify work on?",
+    question: "What types of projects does Tasknify work on?",
     answer:
       "We specialize in building scalable web applications, mobile apps, and enterprise software solutions. Our expertise spans MVP development, system architecture, performance optimization, and scaling existing products. We work with startups, scale-ups, and established companies across various industries including FinTech, HealthTech, E-commerce, and SaaS.",
   },
@@ -136,7 +136,7 @@ const faqs = [
   {
     id: 17,
     category: "general",
-    question: "What makes Taxnify different from other development agencies?",
+    question: "What makes Tasknify different from other development agencies?",
     answer:
       "We focus exclusively on scalable, production-ready solutions rather than quick prototypes. Our team has deep experience with high-growth companies and understands the technical challenges of scaling. We combine technical excellence with business understanding, and we're selective about projects to ensure we can deliver exceptional results.",
   },
@@ -178,7 +178,7 @@ export default function FAQPage() {
               Frequently Asked <span className="font-semibold text-blue-600">Questions</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Everything you need to know about working with Taxnify. Can't find what you're looking for?
+              Everything you need to know about working with Tasknify. Can't find what you're looking for?
               <Link href="/contact" className="text-blue-600 hover:text-blue-700 ml-1">
                 Get in touch
               </Link>
