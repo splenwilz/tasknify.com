@@ -45,6 +45,9 @@ export function Header() {
             <Link href="/contact" className="text-gray-600 hover:text-[#0F172A] transition-colors">
               Contact
             </Link>
+            <Link href="/client-files" className="text-gray-600 hover:text-[#0F172A] transition-colors">
+              Client Files
+            </Link>
           </nav>
 
           <Link href="/contact">

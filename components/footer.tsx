@@ -23,6 +23,11 @@ export function Footer() {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link href="/client-files" className="text-gray-600 hover:text-[#0F172A] text-sm">
+                  Client Files
+                </Link>
+              </li>
             </ul>
           </div>
 
