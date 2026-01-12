@@ -28,31 +28,32 @@ export function Header() {
 
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="/services" className="text-gray-600 hover:text-[#0F172A] transition-colors">
-              Services
+              Features
             </Link>
             <Link href="/case-studies" className="text-gray-600 hover:text-[#0F172A] transition-colors">
-              Case Studies
+              Benefits
             </Link>
-            <Link href="/process" className="text-gray-600 hover:text-[#0F172A] transition-colors">
-              Process
+            <Link href="/faq" className="text-gray-600 hover:text-[#0F172A] transition-colors">
+              FAQ
             </Link>
-            <Link href="/#pricing" className="text-gray-600 hover:text-[#0F172A] transition-colors">
-              Pricing
-            </Link>
-            <Link href="/about" className="text-gray-600 hover:text-[#0F172A] transition-colors">
-              About
+            <Link href="/blog" className="text-gray-600 hover:text-[#0F172A] transition-colors">
+              Blog
             </Link>
             <Link href="/contact" className="text-gray-600 hover:text-[#0F172A] transition-colors">
               Contact
             </Link>
-            <Link href="/client-files" className="text-gray-600 hover:text-[#0F172A] transition-colors">
-              Client Files
-            </Link>
           </nav>
 
-          <Link href="/contact">
-            <Button className="bg-[#111827] cursor-pointer hover:bg-[#0F172A] text-white rounded-full px-6">Book a Consultation</Button>
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="/contact" className="text-gray-600 hover:text-[#0F172A] transition-colors">
+              Sign in
+            </Link>
+            <Link href="/contact">
+              <Button className="bg-[#0F172A] hover:bg-gray-800 text-white rounded-full px-6 py-2">
+                Get started
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </header>

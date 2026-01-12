@@ -1,31 +1,29 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { LogoRow } from "@/components/logo-row"
-import { HowItWorks } from "@/components/how-it-works"
-import { SocialProof } from "@/components/social-proof"
-import { CaseStudy } from "@/components/case-study"
-import { Performance } from "@/components/performance"
-import { Services } from "@/components/services"
-import { Pricing } from "@/components/pricing"
-import { Testimonials } from "@/components/testimonials"
-import { FinalCTA } from "@/components/final-cta"
+import { WithWithout } from "@/components/with-without"
+import { ModernFeatures } from "@/components/modern-features"
+import { FraudSection } from "@/components/fraud-section"
+import { AIFeatures } from "@/components/ai-features"
+import { TeamsSection } from "@/components/teams-section"
+import { WhatsNext } from "@/components/whats-next"
+import { FinalCTARally } from "@/components/final-cta-rally"
 import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA]">
+    <div className="min-h-screen bg-white">
       <Header />
       <main>
         <Hero />
         <LogoRow />
-        <HowItWorks />
-        <SocialProof />
-        <CaseStudy />
-        <Performance />
-        <Services />
-        <Pricing />
-        <Testimonials />
-        <FinalCTA />
+        <WithWithout />
+        <ModernFeatures />
+        <FraudSection />
+        <AIFeatures />
+        <TeamsSection />
+        <WhatsNext />
+        <FinalCTARally />
       </main>
       <Footer />
     </div>

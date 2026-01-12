@@ -23,6 +23,7 @@ const clientFiles = {
                 files: [
                     { name: "AvonBankMeadowWR102JF001.gif", type: "image", size: "2.1 MB" },
                     { name: "AvonbankMeadowWR102JF001.jpg", type: "image", size: "1.8 MB" },
+                    { name: "biofarm_video_frame.jpg", type: "image", size: "91 KB" },
                     { name: "Future Homes Hub.jpeg", type: "image", size: "945 KB" },
                     { name: "Lesnewth.jpeg", type: "image", size: "1.2 MB" },
                     { name: "nLighten.jpeg", type: "image", size: "876 KB" },
@@ -94,12 +95,12 @@ export default function ClientFilesPage() {
                                                                 </div>
                                                             </div>
                                                             <div className="mt-3 flex gap-2">
-                                <Link 
-                                  href={`${folder.path}/${encodeURIComponent(file.name)}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="flex-1"
-                                >
+                                                                <Link
+                                                                    href={`${folder.path}/${encodeURIComponent(file.name)}`}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    className="flex-1"
+                                                                >
                                                                     <Button
                                                                         size="sm"
                                                                         variant="outline"
