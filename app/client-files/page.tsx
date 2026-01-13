@@ -23,9 +23,11 @@ const clientFiles = {
                 files: [
                     { name: "AvonBankMeadowWR102JF001.gif", type: "image", size: "2.1 MB" },
                     { name: "AvonbankMeadowWR102JF001.jpg", type: "image", size: "1.8 MB" },
+                    { name: "Avon_Meadows_photo.jpg", type: "image", size: "1.7 MB" },
                     { name: "biofarm_video_frame.jpg", type: "image", size: "91 KB" },
                     { name: "Future Homes Hub.jpeg", type: "image", size: "945 KB" },
                     { name: "Lesnewth.jpeg", type: "image", size: "1.2 MB" },
+                    { name: "Lesnewth_photo.jpg", type: "image", size: "1.4 MB" },
                     { name: "nLighten.jpeg", type: "image", size: "876 KB" },
                     { name: "Phil+Biofarm+headshot.webp", type: "image", size: "234 KB" },
                     { name: "Swifts.jpeg", type: "image", size: "1.5 MB" },
