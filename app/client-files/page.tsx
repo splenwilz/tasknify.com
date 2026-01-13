@@ -28,6 +28,7 @@ const clientFiles = {
                     { name: "Future Homes Hub.jpeg", type: "image", size: "945 KB" },
                     { name: "Lesnewth.jpeg", type: "image", size: "1.2 MB" },
                     { name: "Lesnewth_photo.jpg", type: "image", size: "1.4 MB" },
+                    { name: "logo.png", type: "image", size: "7.8 KB" },
                     { name: "nLighten.jpeg", type: "image", size: "876 KB" },
                     { name: "Phil+Biofarm+headshot.webp", type: "image", size: "234 KB" },
                     { name: "Swifts.jpeg", type: "image", size: "1.5 MB" },
