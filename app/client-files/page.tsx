@@ -26,6 +26,7 @@ const clientFiles = {
                     { name: "Avon_Meadows_photo.jpg", type: "image", size: "1.7 MB" },
                     { name: "biofarm_video_frame.jpg", type: "image", size: "91 KB" },
                     { name: "Future Homes Hub.jpeg", type: "image", size: "945 KB" },
+                    { name: "footer_logo.png", type: "image", size: "3.3 KB" },
                     { name: "Lesnewth.jpeg", type: "image", size: "1.2 MB" },
                     { name: "Lesnewth_photo.jpg", type: "image", size: "1.4 MB" },
                     { name: "logo.png", type: "image", size: "7.8 KB" },
