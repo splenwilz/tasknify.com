@@ -32,7 +32,9 @@ const clientFiles = {
                     { name: "logo.png", type: "image", size: "7.8 KB" },
                     { name: "nLighten.jpeg", type: "image", size: "876 KB" },
                     { name: "Phil+Biofarm+headshot.webp", type: "image", size: "234 KB" },
+                    { name: "Phil.jpg", type: "image", size: "52 KB" },
                     { name: "Swifts.jpeg", type: "image", size: "1.5 MB" },
+                    { name: "swift.jpg", type: "image", size: "467 KB" },
                     { name: "video_thumbnail.jpg", type: "image", size: "213 KB" },
                 ]
             }
