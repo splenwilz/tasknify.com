@@ -37,6 +37,30 @@ const clientFiles = {
                     { name: "swift.jpg", type: "image", size: "467 KB" },
                     { name: "video_thumbnail.jpg", type: "image", size: "213 KB" },
                 ]
+            },
+            {
+                name: "February Newsletter - Imagery",
+                path: "/biofarms/February Newsletter - Imagery",
+                files: [
+                    { name: "Beyond Availability.jpg", type: "image", size: "1.4 MB" },
+                    { name: "Beyond Constraint.PNG", type: "image", size: "3.3 MB" },
+                    { name: "Beyond Policy.jpeg", type: "image", size: "3.4 MB" },
+                    { name: "Beyond Production.jpg", type: "image", size: "25 MB" },
+                    { name: "Beyond Today.jpeg", type: "image", size: "437 KB" },
+                ]
+            },
+            {
+                name: "Brand Assets",
+                path: "/biofarms/Brand Assets",
+                files: [
+                    { name: "Bee_FINAL.png", type: "image", size: "10 MB" },
+                    { name: "Breeze_Block_FINAL.png", type: "image", size: "26 MB" },
+                    { name: "Crane_FINAL_Updated.png", type: "image", size: "7.0 MB" },
+                    { name: "Fern_FINAL 2.png", type: "image", size: "17 MB" },
+                    { name: "Lapwing_FINAL.png", type: "image", size: "16 MB" },
+                    { name: "Longhon_Cattle_FINAL.png", type: "image", size: "44 MB" },
+                    { name: "Wellington_FINAL.png", type: "image", size: "21 MB" },
+                ]
             }
         ]
     }
