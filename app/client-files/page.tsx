@@ -43,10 +43,15 @@ const clientFiles = {
                 path: "/biofarms/February Newsletter - Imagery",
                 files: [
                     { name: "Beyond Availability.jpg", type: "image", size: "80 KB" },
+                    { name: "Beyond Availability1.jpg", type: "image", size: "55 KB" },
                     { name: "Beyond Constraint.jpg", type: "image", size: "25 KB" },
+                    { name: "Beyond Constraint1.jpg", type: "image", size: "45 KB" },
                     { name: "Beyond Policy.jpg", type: "image", size: "19 KB" },
+                    { name: "Beyond Policy1.jpg", type: "image", size: "35 KB" },
                     { name: "Beyond Production.jpg", type: "image", size: "31 KB" },
+                    { name: "Beyond Production1.jpg", type: "image", size: "29 KB" },
                     { name: "Beyond Today.jpg", type: "image", size: "21 KB" },
+                    { name: "Beyond Today1.jpg", type: "image", size: "38 KB" },
                 ]
             },
             {
