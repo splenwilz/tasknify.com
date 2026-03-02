@@ -1,314 +1,330 @@
+"use client"
+
+import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { RevealOnScroll } from "@/components/reveal-on-scroll"
+
+const currentProjects = [
+  {
+    name: "Logistics Management Platform",
+    badge: "Logistics",
+    description:
+      "End-to-end fleet management and route optimization platform with real-time GPS tracking, automated dispatch, and driver mobile app.",
+    started: "Jan 2026",
+    estDelivery: "Jun 2026",
+    phases: [
+      { label: "Discovery", status: "completed" as const },
+      { label: "Design", status: "completed" as const },
+      { label: "Development", status: "in-progress" as const },
+      { label: "QA", status: "upcoming" as const },
+      { label: "Launch", status: "upcoming" as const },
+    ],
+    tech: ["Next.js", "Go", "PostgreSQL", "Redis", "AWS"],
+  },
+  {
+    name: "AI-Powered Hiring Platform",
+    badge: "HR Tech",
+    description:
+      "Intelligent recruitment platform with resume parsing, candidate scoring, and automated interview scheduling for enterprise hiring teams.",
+    started: "Feb 2026",
+    estDelivery: "Aug 2026",
+    phases: [
+      { label: "Discovery", status: "completed" as const },
+      { label: "Design", status: "in-progress" as const },
+      { label: "Development", status: "upcoming" as const },
+      { label: "QA", status: "upcoming" as const },
+      { label: "Launch", status: "upcoming" as const },
+    ],
+    tech: ["React", "Python", "OpenAI", "PostgreSQL", "GCP"],
+  },
+]
+
+const completedProjects = [
+  {
+    badge: "FinTech",
+    name: "FinanceFlow",
+    description:
+      "Rebuilt a fintech MVP into an enterprise-grade platform processing millions of transactions daily.",
+    metrics: [
+      { value: "2M+", label: "Active Users" },
+      { value: "$50M", label: "Series B Raised" },
+    ],
+    tech: ["React", "Node.js", "AWS", "PostgreSQL"],
+    href: "/case-studies/financeflow",
+  },
+  {
+    badge: "Healthcare",
+    name: "HealthTech Platform",
+    description:
+      "Built a HIPAA-compliant telemedicine platform with EHR integrations serving patients nationwide.",
+    metrics: [
+      { value: "500K+", label: "Patients Served" },
+      { value: "15+", label: "EHR Integrations" },
+    ],
+    tech: ["React", "Node.js", "HIPAA", "AWS"],
+    href: "/case-studies/healthtech-platform",
+  },
+  {
+    badge: "Retail",
+    name: "E-commerce Optimization",
+    description:
+      "Optimized checkout flow and recommendation engine for a Fortune 500 retailer.",
+    metrics: [
+      { value: "40%", label: "Conversion Increase" },
+      { value: "$50M", label: "Additional Revenue" },
+    ],
+    tech: ["Python", "ML", "Redis", "Kubernetes"],
+    href: "/case-studies",
+  },
+]
+
+const aggregateStats = [
+  { value: "$2B+", label: "Client Valuations" },
+  { value: "50+", label: "Products Shipped" },
+  { value: "99.9%", label: "Average Uptime" },
+  { value: "10M+", label: "End Users" },
+]
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA]">
+    <div className="min-h-screen bg-[#050505]">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-              <span className="font-semibold text-orange-600">Real</span> results from real projects
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              See how we've helped ambitious companies scale their technical capabilities and achieve their growth
-              goals.
-            </p>
+        {/* Hero */}
+        <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          {/* Video background */}
+          <div className="absolute inset-0">
+            <video
+              src="/media/pZJZvYHsVTZ3A35vIhN4WUN8O8.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              style={{
+                width: "100%",
+                height: "100%",
+                display: "block",
+                objectFit: "cover",
+                objectPosition: "50% 50%",
+              }}
+            />
+            <div className="absolute inset-0 bg-[#050505]/70" />
+          </div>
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <RevealOnScroll>
+              <span className="text-[#00ff73] text-xs font-medium tracking-[0.2em] uppercase">
+                Case Studies
+              </span>
+              <h1 className="font-display text-4xl md:text-6xl text-white mt-4 mb-6">
+                Real Results, Full Transparency
+              </h1>
+              <p className="text-lg text-white/50 max-w-2xl mx-auto leading-relaxed">
+                Every project gets a timeline. Every milestone is tracked. See exactly
+                how we deliver — from kickoff to launch and beyond.
+              </p>
+            </RevealOnScroll>
           </div>
         </section>
 
-        {/* Featured Case Study */}
+        {/* Current Projects */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <Card className="p-8 lg:p-12 border border-gray-100 shadow-sm bg-gradient-to-br from-blue-50 to-indigo-50">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-100">Featured Case Study</Badge>
-                  <h2 className="text-3xl font-bold text-[#0F172A] mb-4">
-                    FinanceFlow: From Prototype to $50M Series B
-                  </h2>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    A fintech startup needed to rebuild their MVP into an enterprise-grade platform capable of
-                    processing millions of transactions daily. We architected and built a system that scaled from 1,000
-                    to 2M+ users.
-                  </p>
-                  <div className="space-y-4 mb-8">
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                      <span className="text-gray-700">99.99% uptime achieved during Series B fundraising</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                      <span className="text-gray-700">10x improvement in transaction processing speed</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                      <span className="text-gray-700">Zero security incidents during rapid scaling</span>
-                    </div>
-                  </div>
-                  <Button className="bg-[#111827] hover:bg-[#0F172A] text-white rounded-full px-6">
-                    Read Full Case Study
-                  </Button>
-                </div>
-                <div className="bg-white rounded-2xl p-8 shadow-sm">
-                  <div className="space-y-6">
-                    <div>
-                      <div className="text-3xl font-bold text-[#059669] mb-1">2M+</div>
-                      <div className="text-gray-600">Active Users</div>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-bold text-[#2563EB] mb-1">$50M</div>
-                      <div className="text-gray-600">Series B Raised</div>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-bold text-[#DC2626] mb-1">99.99%</div>
-                      <div className="text-gray-600">Uptime</div>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-bold text-[#7C3AED] mb-1">6 months</div>
-                      <div className="text-gray-600">Development Time</div>
-                    </div>
-                  </div>
-                </div>
+          <div className="max-w-7xl mx-auto">
+            <RevealOnScroll>
+              <div className="flex items-center gap-3 mb-10">
+                <div className="w-2 h-2 rounded-full bg-[#00ffff] animate-pulse-dot" />
+                <span className="text-[#00ffff] text-sm font-medium tracking-wide uppercase">
+                  In Progress
+                </span>
               </div>
-            </Card>
-          </div>
-        </section>
+            </RevealOnScroll>
 
-        {/* Case Studies Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#0F172A] mb-4">More Success Stories</h2>
-              <p className="text-xl text-gray-600">Diverse projects across industries and company stages</p>
-            </div>
+            <div className="grid lg:grid-cols-2 gap-6">
+              {currentProjects.map((project) => (
+                <RevealOnScroll key={project.name}>
+                  <div className="neon-card rounded-xl p-8 bg-[#0a0a0a] border-l-2 border-l-[#00ffff]/40">
+                    {/* Badge + name */}
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs bg-[#00ffff]/5 border border-[#00ffff]/20 text-[#00ffff] rounded-full px-3 py-1">
+                        {project.badge}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {project.name}
+                    </h3>
+                    <p className="text-sm text-white/40 leading-relaxed mb-6">
+                      {project.description}
+                    </p>
 
-            <div className="grid lg:grid-cols-2 gap-8">
-              <Card className="p-8 border border-gray-100 shadow-sm">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <div className="w-6 h-6 bg-green-600 rounded"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#0F172A] mb-2">HealthTech Platform</h3>
-                    <p className="text-gray-600 text-sm">Series A Healthcare Startup</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Built HIPAA-compliant telemedicine platform serving 500K+ patients. Integrated with 15+ EHR systems
-                  and achieved SOC 2 Type II compliance.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div>
-                    <div className="text-2xl font-bold text-green-600">500K+</div>
-                    <div className="text-sm text-gray-500">Patients Served</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-green-600">15+</div>
-                    <div className="text-sm text-gray-500">EHR Integrations</div>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary">React</Badge>
-                  <Badge variant="secondary">Node.js</Badge>
-                  <Badge variant="secondary">HIPAA</Badge>
-                  <Badge variant="secondary">AWS</Badge>
-                </div>
-                <Button variant="outline" className="w-full bg-transparent">
-                  View Case Study
-                </Button>
-              </Card>
+                    {/* Phase progress */}
+                    <div className="mb-6">
+                      <div className="flex items-center justify-between mb-4">
+                        {project.phases.map((phase, i) => {
+                          const isCompleted = phase.status === "completed"
+                          const isActive = phase.status === "in-progress"
+                          return (
+                            <div key={phase.label} className="flex items-center flex-1">
+                              <div className="flex flex-col items-center">
+                                <div
+                                  className={`w-3 h-3 rounded-full ${
+                                    isActive
+                                      ? "bg-[#00ffff] shadow-[0_0_10px_rgba(0,255,255,0.5)] animate-pulse-dot"
+                                      : isCompleted
+                                      ? "bg-[#00ff73]"
+                                      : "border border-white/20 bg-transparent"
+                                  }`}
+                                />
+                                <span
+                                  className={`text-[10px] mt-2 whitespace-nowrap ${
+                                    isActive
+                                      ? "text-[#00ffff]"
+                                      : isCompleted
+                                      ? "text-[#00ff73]/60"
+                                      : "text-white/20"
+                                  }`}
+                                >
+                                  {phase.label}
+                                </span>
+                              </div>
+                              {i < project.phases.length - 1 && (
+                                <div
+                                  className={`flex-1 h-px mx-2 mb-5 ${
+                                    isCompleted ? "bg-[#00ff73]/30" : "bg-white/10"
+                                  }`}
+                                />
+                              )}
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </div>
 
-              <Card className="p-8 border border-gray-100 shadow-sm">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <div className="w-6 h-6 bg-purple-600 rounded"></div>
+                    {/* Dates + tech */}
+                    <div className="flex flex-wrap items-center justify-between gap-4">
+                      <div className="flex gap-6 text-xs text-white/30">
+                        <span>Started: <span className="text-white/50">{project.started}</span></span>
+                        <span>Est. Delivery: <span className="text-white/50">{project.estDelivery}</span></span>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {project.tech.map((t) => (
+                          <span
+                            key={t}
+                            className="text-[10px] text-white/40 px-2 py-0.5 rounded bg-white/5 border border-white/10"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#0F172A] mb-2">E-commerce Optimization</h3>
-                    <p className="text-gray-600 text-sm">Fortune 500 Retailer</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Optimized checkout flow and recommendation engine, resulting in 40% increase in conversion rate and
-                  $50M additional annual revenue.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div>
-                    <div className="text-2xl font-bold text-purple-600">40%</div>
-                    <div className="text-sm text-gray-500">Conversion Increase</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-purple-600">$50M</div>
-                    <div className="text-sm text-gray-500">Additional Revenue</div>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary">Python</Badge>
-                  <Badge variant="secondary">ML</Badge>
-                  <Badge variant="secondary">Redis</Badge>
-                  <Badge variant="secondary">Kubernetes</Badge>
-                </div>
-                <Button variant="outline" className="w-full bg-transparent">
-                  View Case Study
-                </Button>
-              </Card>
-
-              <Card className="p-8 border border-gray-100 shadow-sm">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <div className="w-6 h-6 bg-orange-600 rounded"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#0F172A] mb-2">Real Estate Platform</h3>
-                    <p className="text-gray-600 text-sm">PropTech Startup</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Developed property management platform with IoT integration, serving 10K+ properties and processing
-                  $100M+ in transactions annually.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div>
-                    <div className="text-2xl font-bold text-orange-600">10K+</div>
-                    <div className="text-sm text-gray-500">Properties</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-orange-600">$100M+</div>
-                    <div className="text-sm text-gray-500">Transactions</div>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary">Next.js</Badge>
-                  <Badge variant="secondary">IoT</Badge>
-                  <Badge variant="secondary">PostgreSQL</Badge>
-                  <Badge variant="secondary">Stripe</Badge>
-                </div>
-                <Button variant="outline" className="w-full bg-transparent">
-                  View Case Study
-                </Button>
-              </Card>
-
-              <Card className="p-8 border border-gray-100 shadow-sm">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <div className="w-6 h-6 bg-blue-600 rounded"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#0F172A] mb-2">EdTech Learning Platform</h3>
-                    <p className="text-gray-600 text-sm">Education Technology</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Built adaptive learning platform with AI-powered personalization, serving 1M+ students across 50+
-                  countries with 99.5% uptime.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div>
-                    <div className="text-2xl font-bold text-blue-600">1M+</div>
-                    <div className="text-sm text-gray-500">Students</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-blue-600">50+</div>
-                    <div className="text-sm text-gray-500">Countries</div>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary">React</Badge>
-                  <Badge variant="secondary">AI/ML</Badge>
-                  <Badge variant="secondary">GraphQL</Badge>
-                  <Badge variant="secondary">MongoDB</Badge>
-                </div>
-                <Button variant="outline" className="w-full bg-transparent">
-                  View Case Study
-                </Button>
-              </Card>
+                </RevealOnScroll>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Results Summary */}
+        {/* Completed Projects */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#0F172A] mb-4">Results That Matter</h2>
-              <p className="text-xl text-gray-600">Aggregate impact across all our client projects</p>
-            </div>
+          <div className="max-w-7xl mx-auto">
+            <RevealOnScroll>
+              <div className="flex items-center gap-3 mb-10">
+                <div className="w-2 h-2 rounded-full bg-[#00ff73]" />
+                <span className="text-[#00ff73] text-sm font-medium tracking-wide uppercase">
+                  Delivered
+                </span>
+              </div>
+            </RevealOnScroll>
 
-            <div className="grid md:grid-cols-4 gap-8">
-              <Card className="p-6 text-center border border-gray-100 shadow-sm">
-                <div className="text-4xl font-bold text-[#059669] mb-2">$2B+</div>
-                <div className="text-gray-600">Client Valuations</div>
-                <div className="text-sm text-gray-500 mt-2">Combined portfolio value</div>
-              </Card>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {completedProjects.map((project) => (
+                <RevealOnScroll key={project.name}>
+                  <Link href={project.href} className="block group">
+                    <div className="neon-card rounded-xl p-8 bg-[#0a0a0a] h-full">
+                      <span className="inline-flex text-xs bg-[#00ffff]/5 border border-[#00ffff]/20 text-[#00ffff] rounded-full px-3 py-1 mb-5">
+                        {project.badge}
+                      </span>
 
-              <Card className="p-6 text-center border border-gray-100 shadow-sm">
-                <div className="text-4xl font-bold text-[#2563EB] mb-2">50+</div>
-                <div className="text-gray-600">Products Shipped</div>
-                <div className="text-sm text-gray-500 mt-2">From MVP to enterprise</div>
-              </Card>
+                      <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-[#00ffff] transition-colors">
+                        {project.name}
+                      </h3>
+                      <p className="text-sm text-white/40 leading-relaxed mb-6">
+                        {project.description}
+                      </p>
 
-              <Card className="p-6 text-center border border-gray-100 shadow-sm">
-                <div className="text-4xl font-bold text-[#DC2626] mb-2">99.9%</div>
-                <div className="text-gray-600">Average Uptime</div>
-                <div className="text-sm text-gray-500 mt-2">Production systems</div>
-              </Card>
+                      <div className="grid grid-cols-2 gap-4 mb-6">
+                        {project.metrics.map((m) => (
+                          <div key={m.label}>
+                            <div className="text-2xl font-bold text-[#00ffff]">{m.value}</div>
+                            <div className="text-xs text-white/30">{m.label}</div>
+                          </div>
+                        ))}
+                      </div>
 
-              <Card className="p-6 text-center border border-gray-100 shadow-sm">
-                <div className="text-4xl font-bold text-[#7C3AED] mb-2">10M+</div>
-                <div className="text-gray-600">End Users</div>
-                <div className="text-sm text-gray-500 mt-2">Across all platforms</div>
-              </Card>
-            </div>
-          </div>
-        </section>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.tech.map((t) => (
+                          <span
+                            key={t}
+                            className="text-xs text-white/50 px-2.5 py-1 rounded-md bg-white/5 border border-white/10"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
 
-        {/* Industries */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#0F172A] mb-4">Industries We Serve</h2>
-              <p className="text-xl text-gray-600">Deep expertise across diverse sectors</p>
-            </div>
-
-            <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
-              <Card className="p-4 text-center border border-gray-100 shadow-sm">
-                <div className="text-sm font-medium text-gray-700">FinTech</div>
-              </Card>
-              <Card className="p-4 text-center border border-gray-100 shadow-sm">
-                <div className="text-sm font-medium text-gray-700">HealthTech</div>
-              </Card>
-              <Card className="p-4 text-center border border-gray-100 shadow-sm">
-                <div className="text-sm font-medium text-gray-700">E-commerce</div>
-              </Card>
-              <Card className="p-4 text-center border border-gray-100 shadow-sm">
-                <div className="text-sm font-medium text-gray-700">PropTech</div>
-              </Card>
-              <Card className="p-4 text-center border border-gray-100 shadow-sm">
-                <div className="text-sm font-medium text-gray-700">EdTech</div>
-              </Card>
-              <Card className="p-4 text-center border border-gray-100 shadow-sm">
-                <div className="text-sm font-medium text-gray-700">SaaS</div>
-              </Card>
+                      <span className="inline-flex items-center gap-2 text-sm text-[#00ffff]/60 group-hover:text-[#00ffff] transition-colors">
+                        View Timeline
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                  </Link>
+                </RevealOnScroll>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Aggregate Results */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-[#0F172A] mb-6">Ready to become our next success story?</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Let's discuss how we can help you achieve similar results for your business.
-            </p>
-            <Button className="bg-[#111827] hover:bg-[#0F172A] text-white rounded-full px-8 py-3 text-lg">
-              Start Your Project
-            </Button>
+          <div className="max-w-7xl mx-auto">
+            <RevealOnScroll>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {aggregateStats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="neon-card rounded-xl p-6 bg-[#0a0a0a] text-center"
+                  >
+                    <div className="text-3xl md:text-4xl font-bold text-[#00ffff] mb-2">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-white/40">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </RevealOnScroll>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <RevealOnScroll>
+              <h2 className="font-display text-3xl md:text-5xl text-white mb-6">
+                Ready to Become Our Next Success Story?
+              </h2>
+              <p className="text-white/40 text-base mb-10 leading-relaxed">
+                Let&apos;s discuss how we can help you achieve similar results
+                for your business.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center bg-[#00ffff] hover:bg-[#00ffff]/80 text-[#050505] font-semibold rounded-lg px-8 py-3.5 text-sm transition-colors"
+              >
+                Start Your Project
+              </Link>
+            </RevealOnScroll>
           </div>
         </section>
       </main>

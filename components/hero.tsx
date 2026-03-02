@@ -1,134 +1,103 @@
-import { Button } from "@/components/ui/button"
+"use client"
+
 import Link from "next/link"
+import { RevealOnScroll } from "./reveal-on-scroll"
 
 export function Hero() {
   return (
-    <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
-        {/* Y Combinator badge */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">
-            <span className="font-bold">Backed by</span> Y Combinator
+    <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Video background */}
+      <div className="absolute inset-0">
+        <video
+          src="/media/QuN1ehny4A3VcebYsn8Mndpbo.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "block",
+            objectFit: "cover",
+            objectPosition: "50% 50%",
+          }}
+        />
+        {/* Darkening overlay so text stays readable */}
+        <div className="absolute inset-0 bg-[#050505]/40" />
+      </div>
+
+      {/* Subtle background glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#00ffff]/[0.03] rounded-full blur-[120px]" />
+      </div>
+
+
+      <div className="max-w-4xl mx-auto text-center relative z-10">
+        {/* Badge with corner brackets */}
+        <RevealOnScroll delay={0.1}>
+          <div className="relative inline-flex items-center justify-center px-3 py-1.5 mb-10">
+            {/* Background */}
+            <div className="absolute inset-0 bg-[#00ffff]/10" />
+            {/* Corner brackets */}
+            <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r border-[#00ffff]" />
+            <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-[#00ffff]" />
+            <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b border-l border-[#00ffff]" />
+            <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b border-r border-[#00ffff]" />
+            <p className="relative text-[#00ffff] text-sm tracking-[-0.02em] leading-[1.6]">
+              Custom Software Development
+            </p>
           </div>
-        </div>
+        </RevealOnScroll>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold text-black leading-tight">
-                One team, <br />
-                <span className="text-black">faster delivery</span> <br />
-                for your product
-              </h1>
-              
-              <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                Tasknify gives you complete control over all software development with real-time progress tracking, 
-                quality assurance, and delivery guarantees.
-              </p>
-            </div>
+        {/* Main headline */}
+        <RevealOnScroll delay={0.2}>
+          <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] text-white leading-[1.05] mb-8">
+            Your Vision,
+            <br />
+            Precision Engineered
+          </h1>
+        </RevealOnScroll>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-lg w-full sm:w-auto">
-                  Learn More
-                </Button>
-              </Link>
-              <Link href="/case-studies">
-                <Button 
-                  variant="outline" 
-                  className="border-2 border-gray-300 hover:border-gray-400 px-8 py-3 text-lg font-semibold bg-white hover:bg-gray-50 rounded-lg w-full sm:w-auto"
-                >
-                  Get Started
-                </Button>
-              </Link>
-            </div>
-
-            {/* Trust indicators */}
-            <div className="flex flex-wrap gap-8 text-sm text-gray-600">
-              <div>No hidden fees</div>
-              <div>24/7 Support</div>
-              <div>GDPR / SOC2 / ISO 27001</div>
-            </div>
-          </div>
-
-          {/* Right side - Product screenshot */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 relative overflow-hidden">
-              {/* Mock dashboard interface */}
-              <div className="bg-white rounded-xl shadow-lg p-6 relative z-10">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900">Project Dashboard</h3>
-                  <div className="text-sm text-gray-500">Date: {new Date().toLocaleDateString()}</div>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                    <div>
-                      <div className="font-medium text-gray-900">Authentication System</div>
-                      <div className="text-sm text-green-600">✓ Completed</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-semibold text-gray-900">100%</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-                    <div>
-                      <div className="font-medium text-gray-900">API Development</div>
-                      <div className="text-sm text-blue-600">• In Progress</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-semibold text-gray-900">75%</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <div>
-                      <div className="font-medium text-gray-900">Frontend Components</div>
-                      <div className="text-sm text-gray-500">• Pending</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-semibold text-gray-900">25%</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <div>
-                      <div className="font-medium text-gray-900">Testing & QA</div>
-                      <div className="text-sm text-gray-500">• Scheduled</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-semibold text-gray-900">0%</div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mt-6 pt-4 border-t border-gray-200">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">Overall Progress</span>
-                    <span className="text-lg font-bold text-blue-600">67%</span>
-                  </div>
-                  <div className="mt-2 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 h-2 rounded-full" style={{width: '67%'}}></div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Background decoration */}
-              <div className="absolute top-4 right-4 w-20 h-20 bg-blue-200 rounded-full opacity-50"></div>
-              <div className="absolute bottom-4 left-4 w-16 h-16 bg-indigo-200 rounded-full opacity-50"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom text */}
-        <div className="text-center mt-16">
-          <p className="text-gray-600">
-            Access 1,000,000+ developers, designers, and project managers across the globe!
+        {/* Subtitle */}
+        <RevealOnScroll delay={0.3}>
+          <p className="text-base md:text-lg text-white/50 max-w-2xl mx-auto mb-12 leading-relaxed">
+            Transform your vision into production-grade software with modern
+            architecture and precision engineering.
           </p>
+        </RevealOnScroll>
+
+        {/* CTA Button with corner brackets */}
+        <RevealOnScroll delay={0.4}>
+          <Link href="/contact" className="relative inline-flex items-center justify-center px-8 py-3.5 group">
+            {/* Corner brackets */}
+            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#d9e0ff] group-hover:border-[#00ffff] transition-colors" />
+            <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#d9e0ff] group-hover:border-[#00ffff] transition-colors" />
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-[#d9e0ff] group-hover:border-[#00ffff] transition-colors" />
+            <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-[#d9e0ff] group-hover:border-[#00ffff] transition-colors" />
+            <span className="relative text-white text-lg tracking-[-0.02em]">
+              Get in Touch
+            </span>
+          </Link>
+        </RevealOnScroll>
+      </div>
+
+      {/* Trusted by section at bottom */}
+      <div className="absolute bottom-8 sm:bottom-12 left-0 right-0 z-10">
+        <p className="text-center text-xs text-white/30 mb-4 tracking-wider">
+          Trusted by top innovative teams
+        </p>
+        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 px-4">
+          {["Vercel", "Stripe", "Loom", "APEX", "Quantum", "Celestial", "Basecamp", "Linear"].map((name) => (
+            <span key={name} className="text-white/20 text-sm font-medium tracking-wide">
+              {name}
+            </span>
+          ))}
         </div>
       </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050505] to-transparent" />
     </section>
   )
 }

@@ -1,114 +1,144 @@
-import Link from "next/link";
+"use client"
+
+import Link from "next/link"
+import { useState } from "react"
+import { RevealOnScroll } from "./reveal-on-scroll"
 
 export function Footer() {
+  const [email, setEmail] = useState("")
+
   return (
-    <footer className="bg-white border-t border-gray-200 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
-          <div>
-            <h3 className="font-semibold text-[#0F172A] mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/client-files" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  Client Files
-                </Link>
-              </li>
-            </ul>
-          </div>
+    <footer className="bg-[#050505] border-t border-white/5">
+      {/* Get in Touch section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <RevealOnScroll>
+          <span className="text-[#00ff73] text-xs font-medium tracking-[0.2em] uppercase">
+            Contact
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl text-white mt-3 mb-4">
+            Get in Touch
+          </h2>
+          <p className="text-white/40 text-sm mb-12 max-w-xl">
+            Whether you need a development partner, want to discuss your project,
+            or request a consultation, our team is ready to help.
+          </p>
+        </RevealOnScroll>
 
+        <div className="grid sm:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-semibold text-[#0F172A] mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  MVP Development
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  AI Integration
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  Cloud & DevOps
-                </Link>
-              </li>
-            </ul>
+            <p className="text-white text-sm font-medium mb-2">
+              General communication
+            </p>
+            <p className="text-white/30 text-sm mb-3">
+              Connect with our team for project estimates, technical consultations, or partnership opportunities.
+            </p>
+            <p className="text-[#00ffff] text-sm">hello@tasknify.com</p>
           </div>
-
           <div>
-            <h3 className="font-semibold text-[#0F172A] mb-4">Legal</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/privacy" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  Privacy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  Terms
-                </Link>
-              </li>
-              <li>
-                <Link href="/security" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  Security
-                </Link>
-              </li>
-            </ul>
+            <p className="text-white text-sm font-medium mb-2">
+              Help &amp; support
+            </p>
+            <p className="text-white/30 text-sm mb-3">
+              Ask technical questions, report issues, or share feedback — we are here to help.
+            </p>
+            <p className="text-[#00ffff] text-sm">support@tasknify.com</p>
           </div>
-
           <div>
-            <h3 className="font-semibold text-[#0F172A] mb-4">Contact</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="mailto:hello@tasknify.com" className="text-gray-600 hover:text-[#0F172A] text-sm">
-                  hello@tasknify.com
-                </Link>
-              </li>
-              <li>
-                <span className="text-gray-600 text-sm">Abuja • Remote</span>
-              </li>
-            </ul>
+            <p className="text-white text-sm font-medium mb-2">
+              Direct Line
+            </p>
+            <p className="text-white/30 text-sm mb-3">
+              Reach us instantly for quick consultations and project discussions, anytime you need.
+            </p>
+            <p className="text-[#00ffff] text-sm">+1 (555) 123-4567</p>
           </div>
         </div>
+      </div>
 
-        <div className="pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">© 2025 Tasknify. All rights reserved.</p>
-          <div className="flex gap-4 mt-4 sm:mt-0">
-            <Link href="#" className="text-gray-400 hover:text-[#0F172A]">
-              <span className="sr-only">Twitter</span>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-              </svg>
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-[#0F172A]">
-              <span className="sr-only">LinkedIn</span>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  fillRule="evenodd"
-                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
+      {/* Divider */}
+      <div className="border-t border-white/5" />
+
+      {/* Newsletter + Links */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid md:grid-cols-[1fr_auto_auto] gap-12">
+          {/* Newsletter */}
+          <div>
+            <p className="text-white text-sm font-medium mb-2">
+              Join our newsletter
+            </p>
+            <p className="text-white/30 text-sm mb-4">
+              Sign up to our mailing list below and be the first to know about
+              new updates. Don&apos;t worry, we hate spam too.
+            </p>
+            <div className="flex gap-2 max-w-sm">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email address"
+                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#00ffff]/30"
+              />
+              <button className="bg-[#00ffff] hover:bg-[#00ffff]/80 text-[#050505] rounded-lg px-4 py-2 text-sm font-semibold transition-colors">
+                Submit
+              </button>
+            </div>
+          </div>
+
+          {/* Sections links */}
+          <div>
+            <p className="text-white/30 text-xs uppercase tracking-wider mb-4">
+              Sections
+            </p>
+            <nav className="flex flex-col gap-2">
+              <Link href="/about" className="text-white/50 hover:text-white text-sm transition-colors">
+                About
+              </Link>
+              <Link href="#features" className="text-white/50 hover:text-white text-sm transition-colors">
+                Features
+              </Link>
+              <Link href="/services" className="text-white/50 hover:text-white text-sm transition-colors">
+                Services
+              </Link>
+              <Link href="#pricing" className="text-white/50 hover:text-white text-sm transition-colors">
+                Pricing
+              </Link>
+            </nav>
+          </div>
+
+          {/* Social + Info links */}
+          <div className="flex gap-12">
+            <div>
+              <p className="text-white/30 text-xs uppercase tracking-wider mb-4">
+                Social Media
+              </p>
+              <nav className="flex flex-col gap-2">
+                <span className="text-white/50 text-sm">Instagram</span>
+                <span className="text-white/50 text-sm">X/Twitter</span>
+                <span className="text-white/50 text-sm">Linkedin</span>
+              </nav>
+            </div>
+            <div>
+              <p className="text-white/30 text-xs uppercase tracking-wider mb-4">
+                Information
+              </p>
+              <nav className="flex flex-col gap-2">
+                <Link href="/contact" className="text-white/50 hover:text-white text-sm transition-colors">
+                  Contact
+                </Link>
+              </nav>
+            </div>
           </div>
         </div>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-white/5" />
+
+      {/* Large brand text */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <h3 className="font-display text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] text-white leading-none tracking-tight">
+          TASKNIFY
+        </h3>
       </div>
     </footer>
   )

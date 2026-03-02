@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Geist } from "next/font/google"
+import { Inter, Paytone_One } from "next/font/google"
+import { UISounds } from "@/components/ui-sounds"
 import "./globals.css"
 
 const inter = Inter({
@@ -9,17 +10,17 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-const geist = Geist({
+const paytoneOne = Paytone_One({
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-geist",
+  variable: "--font-paytone",
 })
 
 export const metadata: Metadata = {
-  title: "Tasknify - Fast, Scalable Software Development",
+  title: "Tasknify — Software Development Agency",
   description:
-    "Tasknify builds fast, scalable software—so your product moves at the speed of your ambition. Rust & TypeScript, Cloud-Native, High-Scale Architectures.",
-    generator: 'v0.app'
+    "Tasknify is a premium software development agency. We engineer custom web apps, mobile platforms, cloud solutions, and APIs that scale with your business.",
 }
 
 export default function RootLayout({
@@ -28,8 +29,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${geist.variable} antialiased`}>
-      <body className="font-sans">{children}</body>
+    <html lang="en" className={`${inter.variable} ${paytoneOne.variable} antialiased`}>
+      <body className="font-sans">
+        <UISounds />
+        {children}
+      </body>
     </html>
   )
 }

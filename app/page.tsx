@@ -1,29 +1,31 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
-import { LogoRow } from "@/components/logo-row"
-import { WithWithout } from "@/components/with-without"
-import { ModernFeatures } from "@/components/modern-features"
-import { FraudSection } from "@/components/fraud-section"
-import { AIFeatures } from "@/components/ai-features"
-import { TeamsSection } from "@/components/teams-section"
-import { WhatsNext } from "@/components/whats-next"
-import { FinalCTARally } from "@/components/final-cta-rally"
+import { StatsGrid } from "@/components/stats-grid"
+import { CoreDefenses } from "@/components/core-defenses"
+import { LeadershipQuote } from "@/components/leadership-quote"
+import { ComprehensiveProtection } from "@/components/comprehensive-protection"
+import { PastProjects } from "@/components/past-projects"
+import { ActiveThreatsGlobe } from "@/components/active-threats-globe"
+import { PricingSection } from "@/components/pricing-section"
+import { TestimonialSection } from "@/components/testimonial-section"
+import { CtaSection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#050505]">
       <Header />
       <main>
         <Hero />
-        <LogoRow />
-        <WithWithout />
-        <ModernFeatures />
-        <FraudSection />
-        <AIFeatures />
-        <TeamsSection />
-        <WhatsNext />
-        <FinalCTARally />
+        <StatsGrid />
+        <CoreDefenses />
+        <LeadershipQuote />
+        <ComprehensiveProtection />
+        <PastProjects />
+        <ActiveThreatsGlobe />
+        <PricingSection />
+        <TestimonialSection />
+        <CtaSection />
       </main>
       <Footer />
     </div>
