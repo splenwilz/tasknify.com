@@ -1,17 +1,10 @@
+"use client"
+
+import { useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Metadata } from "next"
-import { Download, FileImage, Folder } from "lucide-react"
 
-export const metadata: Metadata = {
-    title: "Client Files - Tasknify",
-    description: "Access your project files, assets, and deliverables. Secure client portal for Tasknify projects.",
-}
-
-// This would typically come from a database or API
 const clientFiles = {
     biofarms: {
         name: "BioFarms",
@@ -21,50 +14,60 @@ const clientFiles = {
                 name: "January Newsletter - Imagery",
                 path: "/biofarms/January Newsletter - Imagery",
                 files: [
-                    { name: "AvonBankMeadowWR102JF001.gif", type: "image", size: "2.1 MB" },
-                    { name: "AvonbankMeadowWR102JF001.jpg", type: "image", size: "1.8 MB" },
-                    { name: "Avon_Meadows_photo.jpg", type: "image", size: "1.7 MB" },
-                    { name: "biofarm_video_frame.jpg", type: "image", size: "91 KB" },
-                    { name: "Future Homes Hub.jpeg", type: "image", size: "945 KB" },
-                    { name: "footer_logo.png", type: "image", size: "3.3 KB" },
-                    { name: "Lesnewth.jpeg", type: "image", size: "1.2 MB" },
-                    { name: "Lesnewth_photo.jpg", type: "image", size: "1.4 MB" },
-                    { name: "logo.png", type: "image", size: "7.8 KB" },
-                    { name: "nLighten.jpeg", type: "image", size: "876 KB" },
-                    { name: "Phil+Biofarm+headshot.webp", type: "image", size: "234 KB" },
-                    { name: "Phil.jpg", type: "image", size: "52 KB" },
-                    { name: "Swifts.jpeg", type: "image", size: "1.5 MB" },
-                    { name: "swift.jpg", type: "image", size: "467 KB" },
-                    { name: "video_thumbnail.jpg", type: "image", size: "213 KB" },
+                    { name: "AvonBankMeadowWR102JF001.gif", size: "2.1 MB" },
+                    { name: "AvonbankMeadowWR102JF001.jpg", size: "1.8 MB" },
+                    { name: "Avon_Meadows_photo.jpg", size: "1.7 MB" },
+                    { name: "biofarm_video_frame.jpg", size: "91 KB" },
+                    { name: "Future Homes Hub.jpeg", size: "945 KB" },
+                    { name: "footer_logo.png", size: "3.3 KB" },
+                    { name: "Lesnewth.jpeg", size: "1.2 MB" },
+                    { name: "Lesnewth_photo.jpg", size: "1.4 MB" },
+                    { name: "logo.png", size: "7.8 KB" },
+                    { name: "nLighten.jpeg", size: "876 KB" },
+                    { name: "Phil+Biofarm+headshot.webp", size: "234 KB" },
+                    { name: "Phil.jpg", size: "52 KB" },
+                    { name: "Swifts.jpeg", size: "1.5 MB" },
+                    { name: "swift.jpg", size: "467 KB" },
+                    { name: "video_thumbnail.jpg", size: "213 KB" },
                 ]
             },
             {
                 name: "February Newsletter - Imagery",
                 path: "/biofarms/February Newsletter - Imagery",
                 files: [
-                    { name: "Beyond Availability.jpg", type: "image", size: "80 KB" },
-                    { name: "Beyond Availability1.jpg", type: "image", size: "55 KB" },
-                    { name: "Beyond Constraint.jpg", type: "image", size: "25 KB" },
-                    { name: "Beyond Constraint1.jpg", type: "image", size: "45 KB" },
-                    { name: "Beyond Policy.jpg", type: "image", size: "19 KB" },
-                    { name: "Beyond Policy1.jpg", type: "image", size: "35 KB" },
-                    { name: "Beyond Production.jpg", type: "image", size: "31 KB" },
-                    { name: "Beyond Production1.jpg", type: "image", size: "29 KB" },
-                    { name: "Beyond Today.jpg", type: "image", size: "21 KB" },
-                    { name: "Beyond Today1.jpg", type: "image", size: "38 KB" },
+                    { name: "Beyond Availability.jpg", size: "80 KB" },
+                    { name: "Beyond Availability1.jpg", size: "55 KB" },
+                    { name: "Beyond Constraint.jpg", size: "25 KB" },
+                    { name: "Beyond Constraint1.jpg", size: "45 KB" },
+                    { name: "Beyond Policy.jpg", size: "19 KB" },
+                    { name: "Beyond Policy1.jpg", size: "35 KB" },
+                    { name: "Beyond Production.jpg", size: "31 KB" },
+                    { name: "Beyond Production1.jpg", size: "29 KB" },
+                    { name: "Beyond Today.jpg", size: "21 KB" },
+                    { name: "Beyond Today1.jpg", size: "38 KB" },
+                ]
+            },
+            {
+                name: "March Newsletter - Imagery",
+                path: "/biofarms/March Newsletter - Imagery",
+                files: [
+                    { name: "badger.jpeg", size: "132 KB" },
+                    { name: "spring-cleaning-at-sleight.JPG", size: "967 KB" },
+                    { name: "WEMCA.jpeg", size: "679 KB" },
+                    { name: "wren-x-bio-logo-Lock-up.png", size: "113 KB" },
                 ]
             },
             {
                 name: "Brand Assets",
                 path: "/biofarms/Brand Assets",
                 files: [
-                    { name: "Bee_FINAL.png", type: "image", size: "6.4 KB" },
-                    { name: "Breeze_Block_FINAL.png", type: "image", size: "3.6 KB" },
-                    { name: "Crane_FINAL_Updated.png", type: "image", size: "3.3 KB" },
-                    { name: "Fern_FINAL 2.png", type: "image", size: "7.5 KB" },
-                    { name: "Lapwing_FINAL.png", type: "image", size: "3.2 KB" },
-                    { name: "Longhon_Cattle_FINAL.png", type: "image", size: "9.3 KB" },
-                    { name: "Wellington_FINAL.png", type: "image", size: "2.7 KB" },
+                    { name: "Bee_FINAL.png", size: "6.4 KB" },
+                    { name: "Breeze_Block_FINAL.png", size: "3.6 KB" },
+                    { name: "Crane_FINAL_Updated.png", size: "3.3 KB" },
+                    { name: "Fern_FINAL 2.png", size: "7.5 KB" },
+                    { name: "Lapwing_FINAL.png", size: "3.2 KB" },
+                    { name: "Longhon_Cattle_FINAL.png", size: "9.3 KB" },
+                    { name: "Wellington_FINAL.png", size: "2.7 KB" },
                 ]
             }
         ]
@@ -72,111 +75,145 @@ const clientFiles = {
 }
 
 export default function ClientFilesPage() {
+    const [openFolders, setOpenFolders] = useState<Record<string, boolean>>({})
+
+    function toggleFolder(key: string) {
+        setOpenFolders(prev => ({ ...prev, [key]: !prev[key] }))
+    }
+
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-[#050505]">
             <Header />
 
-            <main className="pt-24 pb-16">
-                {/* Hero Section */}
-                <section className="px-4 sm:px-6 lg:px-8 mb-12">
+            <main>
+                {/* Hero */}
+                <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h1 className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4">
-                                Client Files
-                            </h1>
-                            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                                Access your project files, assets, and deliverables. All your Tasknify project resources in one secure location.
-                            </p>
-                        </div>
+                        <span className="text-[#00ff73] text-xs font-medium tracking-[0.2em] uppercase">
+                            Client Portal
+                        </span>
+                        <h1 className="font-display text-4xl md:text-6xl text-white mt-4 mb-4">
+                            Client Files
+                        </h1>
+                        <p className="text-lg text-white/50 max-w-2xl leading-relaxed">
+                            Access your project files, assets, and deliverables. All your
+                            Tasknify project resources in one secure location.
+                        </p>
                     </div>
                 </section>
 
-                {/* Client Files Grid */}
-                <section className="px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="grid gap-8">
-                            {Object.entries(clientFiles).map(([clientKey, client]) => (
-                                <Card key={clientKey} className="p-8">
-                                    <div className="flex items-center gap-4 mb-6">
-                                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                                            <Folder className="w-6 h-6 text-blue-600" />
-                                        </div>
-                                        <div>
-                                            <h2 className="text-2xl font-bold text-[#0F172A]">{client.name}</h2>
-                                            <p className="text-gray-600">{client.description}</p>
-                                        </div>
+                {/* Client Files */}
+                <section className="pb-24 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto space-y-10">
+                        {Object.entries(clientFiles).map(([clientKey, client]) => (
+                            <div key={clientKey} className="neon-card rounded-xl p-8 bg-[#0a0a0a]">
+                                {/* Client header */}
+                                <div className="flex items-center gap-4 mb-8">
+                                    <div className="w-11 h-11 rounded-lg bg-[#00ffff]/10 flex items-center justify-center">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
+                                        </svg>
                                     </div>
+                                    <div>
+                                        <h2 className="text-xl font-semibold text-white">{client.name}</h2>
+                                        <p className="text-sm text-white/30">{client.description}</p>
+                                    </div>
+                                </div>
 
-                                    <div className="space-y-6">
-                                        {client.folders.map((folder, folderIndex) => (
-                                            <div key={folderIndex} className="border border-gray-200 rounded-lg p-6">
-                                                <div className="flex items-center gap-3 mb-4">
-                                                    <Folder className="w-5 h-5 text-gray-500" />
-                                                    <h3 className="text-lg font-semibold text-[#0F172A]">{folder.name}</h3>
-                                                    <span className="text-sm text-gray-500">({folder.files.length} files)</span>
-                                                </div>
+                                {/* Folders as accordions */}
+                                <div className="space-y-3">
+                                    {client.folders.map((folder, fi) => {
+                                        const key = `${clientKey}-${fi}`
+                                        const isOpen = openFolders[key] ?? false
 
-                                                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                                    {folder.files.map((file, fileIndex) => (
-                                                        <div key={fileIndex} className="bg-white border border-gray-100 rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                                            <div className="flex items-start gap-3">
-                                                                <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                                    <FileImage className="w-5 h-5 text-gray-500" />
-                                                                </div>
-                                                                <div className="flex-1 min-w-0">
-                                                                    <p className="text-sm font-medium text-[#0F172A] truncate" title={file.name}>
-                                                                        {file.name}
-                                                                    </p>
-                                                                    <p className="text-xs text-gray-500 mt-1">{file.size}</p>
-                                                                </div>
-                                                            </div>
-                                                            <div className="mt-3 flex gap-2">
+                                        return (
+                                            <div key={fi} className="rounded-lg border border-white/5 bg-[#050505] overflow-hidden">
+                                                {/* Folder header - clickable */}
+                                                <button
+                                                    onClick={() => toggleFolder(key)}
+                                                    className="w-full flex items-center gap-3 p-5 hover:bg-white/[0.02] transition-colors"
+                                                >
+                                                    <svg
+                                                        width="18"
+                                                        height="18"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="#00ffff"
+                                                        strokeWidth="1.5"
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        className="opacity-50 shrink-0"
+                                                    >
+                                                        <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
+                                                    </svg>
+                                                    <h3 className="text-base font-medium text-white text-left flex-1">{folder.name}</h3>
+                                                    <span className="text-xs text-white/20 shrink-0">{folder.files.length} files</span>
+                                                    <svg
+                                                        width="16"
+                                                        height="16"
+                                                        viewBox="0 0 16 16"
+                                                        fill="none"
+                                                        className={`text-white/20 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                                                    >
+                                                        <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                    </svg>
+                                                </button>
+
+                                                {/* File grid - collapsible */}
+                                                {isOpen && (
+                                                    <div className="px-5 pb-5">
+                                                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                                                            {folder.files.map((file, fileIdx) => (
                                                                 <Link
+                                                                    key={fileIdx}
                                                                     href={`${folder.path}/${encodeURIComponent(file.name)}`}
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
-                                                                    className="flex-1"
+                                                                    className="group flex items-center gap-3 rounded-lg border border-white/5 bg-[#0a0a0a] p-3.5 hover:border-[#00ffff]/20 transition-colors"
                                                                 >
-                                                                    <Button
-                                                                        size="sm"
-                                                                        variant="outline"
-                                                                        className="w-full text-xs"
-                                                                    >
-                                                                        <Download className="w-3 h-3 mr-1" />
-                                                                        Download
-                                                                    </Button>
+                                                                    <div className="w-9 h-9 rounded-md bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-[#00ffff]/10 transition-colors">
+                                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/30 group-hover:text-[#00ffff] transition-colors">
+                                                                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                                                            <polyline points="14 2 14 8 20 8" />
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div className="flex-1 min-w-0">
+                                                                        <p className="text-sm text-white/60 truncate group-hover:text-white transition-colors" title={file.name}>
+                                                                            {file.name}
+                                                                        </p>
+                                                                        <p className="text-[11px] text-white/20">{file.size}</p>
+                                                                    </div>
+                                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/10 group-hover:text-[#00ffff] transition-colors shrink-0">
+                                                                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                                                                    </svg>
                                                                 </Link>
-                                                            </div>
+                                                            ))}
                                                         </div>
-                                                    ))}
-                                                </div>
+                                                    </div>
+                                                )}
                                             </div>
-                                        ))}
-                                    </div>
-                                </Card>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Access Notice */}
-                <section className="px-4 sm:px-6 lg:px-8 mt-12">
-                    <div className="max-w-4xl mx-auto">
-                        <Card className="p-6 bg-blue-50 border-blue-200">
-                            <div className="text-center">
-                                <h3 className="text-lg font-semibold text-[#0F172A] mb-2">
-                                    Need Access to Your Files?
-                                </h3>
-                                <p className="text-gray-600 mb-4">
-                                    If you're a client and don't see your project files here, or need access to additional resources, please contact us.
-                                </p>
-                                <Link href="/contact">
-                                    <Button className="bg-[#0F172A] hover:bg-gray-800 text-white">
-                                        Contact Support
-                                    </Button>
-                                </Link>
+                                        )
+                                    })}
+                                </div>
                             </div>
-                        </Card>
+                        ))}
+
+                        {/* Access notice */}
+                        <div className="rounded-xl border border-[#00ffff]/10 bg-[#0a0a0a] p-8 text-center">
+                            <h3 className="text-lg font-semibold text-white mb-2">
+                                Need Access to Your Files?
+                            </h3>
+                            <p className="text-sm text-white/40 mb-6 max-w-lg mx-auto">
+                                If you&apos;re a client and don&apos;t see your project files here,
+                                or need access to additional resources, please contact us.
+                            </p>
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center justify-center bg-[#00ffff] hover:bg-[#00ffff]/80 text-[#050505] font-semibold rounded-lg px-8 py-3 text-sm transition-colors"
+                            >
+                                Contact Support
+                            </Link>
+                        </div>
                     </div>
                 </section>
             </main>

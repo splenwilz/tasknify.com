@@ -125,6 +125,9 @@ export function Footer() {
                 <Link href="/contact" className="text-white/50 hover:text-white text-sm transition-colors">
                   Contact
                 </Link>
+                <Link href="/client-files" className="text-white/50 hover:text-white text-sm transition-colors">
+                  Client Files
+                </Link>
               </nav>
             </div>
           </div>
