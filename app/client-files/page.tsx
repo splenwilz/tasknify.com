@@ -54,7 +54,7 @@ const clientFiles = {
                     { name: "badger.jpeg", size: "132 KB" },
                     { name: "spring-cleaning-at-sleight.JPG", size: "967 KB" },
                     { name: "WEMCA.jpeg", size: "679 KB" },
-                    { name: "wren-x-bio-logo-Lock-up.png", size: "113 KB" },
+                    { name: "wrenbridge.jpg", size: "228 KB" },
                 ]
             },
             {
