@@ -52,7 +52,7 @@ const clientFiles = {
                 path: "/biofarms/March Newsletter - Imagery",
                 files: [
                     { name: "badger.jpeg", size: "132 KB" },
-                    { name: "badger-2.jpg", size: "173 KB" },
+                    { name: "badger-collage.jpg", size: "173 KB" },
                     { name: "badger-bank.png", size: "387 KB" },
                     { name: "spring-cleaning-at-sleight.JPG", size: "967 KB" },
                     { name: "WEMCA.jpeg", size: "679 KB" },
