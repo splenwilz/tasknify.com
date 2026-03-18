@@ -3,6 +3,7 @@
 import { useEffect, useCallback, useRef } from "react"
 
 let hoverAudio: HTMLAudioElement | null = null
+let clickAudio: HTMLAudioElement | null = null
 let userHasInteracted = false
 
 function playHoverSound() {
@@ -12,27 +13,9 @@ function playHoverSound() {
 }
 
 function playClickSound() {
-  if (!userHasInteracted) return
-  try {
-    const ctx = new AudioContext()
-    const oscillator = ctx.createOscillator()
-    const gain = ctx.createGain()
-
-    oscillator.connect(gain)
-    gain.connect(ctx.destination)
-
-    oscillator.type = "sine"
-    oscillator.frequency.setValueAtTime(2400, ctx.currentTime)
-    oscillator.frequency.exponentialRampToValueAtTime(1800, ctx.currentTime + 0.06)
-
-    gain.gain.setValueAtTime(0.06, ctx.currentTime)
-    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.08)
-
-    oscillator.start(ctx.currentTime)
-    oscillator.stop(ctx.currentTime + 0.08)
-  } catch {
-    // Silent fail
-  }
+  if (!userHasInteracted || !clickAudio) return
+  clickAudio.currentTime = 0
+  clickAudio.play().catch(() => {})
 }
 
 function unlockAudio() {
@@ -42,6 +25,10 @@ function unlockAudio() {
   if (!hoverAudio) {
     hoverAudio = new Audio("/media/hover.m4a")
     hoverAudio.volume = 0.3
+  }
+  if (!clickAudio) {
+    clickAudio = new Audio("/media/soundreality-mouse.mp3")
+    clickAudio.volume = 0.3
   }
 }
 
