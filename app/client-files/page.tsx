@@ -60,6 +60,19 @@ const clientFiles = {
                 ]
             },
             {
+                name: "April Newsletter - Imagery",
+                path: "/biofarms/April Newsletter - Imagery",
+                files: [
+                    { name: "acorn-fairford.png", size: "590 KB" },
+                    { name: "avon-fire.png", size: "637 KB" },
+                    { name: "christy-wells-field.png", size: "577 KB" },
+                    { name: "hero-hardhats.png", size: "676 KB" },
+                    { name: "rycote-planning.png", size: "156 KB" },
+                    { name: "tamworth-pig.png", size: "51 KB" },
+                    { name: "worth-abbey.png", size: "527 KB" },
+                ]
+            },
+            {
                 name: "Brand Assets",
                 path: "/biofarms/Brand Assets",
                 files: [
