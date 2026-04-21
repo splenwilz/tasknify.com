@@ -65,6 +65,7 @@ const clientFiles = {
                 files: [
                     { name: "acorn-fairford.png", size: "590 KB" },
                     { name: "avon-fire.png", size: "637 KB" },
+                    { name: "breeze-block.png", size: "172 KB" },
                     { name: "christy-wells-field.png", size: "577 KB" },
                     { name: "hero-hardhats.png", size: "676 KB" },
                     { name: "rycote-planning.png", size: "156 KB" },
