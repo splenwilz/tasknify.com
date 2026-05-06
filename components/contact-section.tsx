@@ -60,7 +60,7 @@ export function ContactSection() {
                 Email
               </span>
               <p className="text-white font-semibold mt-1">
-                hello@tasknify.com
+                info@tasknify.com
               </p>
             </div>
             <div className="border-t border-white/5 pt-6">
@@ -68,7 +68,7 @@ export function ContactSection() {
                 Phone
               </span>
               <p className="text-white font-semibold mt-1">
-                +1 (555) 123-4567
+                +234 913 551 5251
               </p>
             </div>
             <div className="border-t border-white/5 pt-6">

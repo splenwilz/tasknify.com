@@ -109,23 +109,22 @@ export default function ContactPage() {
                   <span className="text-[#00ffff] text-xs font-medium uppercase tracking-widest">
                     Email
                   </span>
-                  <p className="text-white text-lg mt-2">hello@tasknify.com</p>
+                  <p className="text-white text-lg mt-2">info@tasknify.com</p>
                 </div>
 
                 <div className="py-8 border-b border-white/5">
                   <span className="text-[#00ffff] text-xs font-medium uppercase tracking-widest">
                     Phone
                   </span>
-                  <p className="text-white text-lg mt-2">+1 (555) 123-4567</p>
+                  <p className="text-white text-lg mt-2">+234 913 551 5251</p>
                 </div>
 
                 <div className="py-8">
                   <span className="text-[#00ffff] text-xs font-medium uppercase tracking-widest">
                     Address
                   </span>
-                  <p className="text-white text-lg mt-2">
-                    Abuja, Nigeria / Remote-First
-                  </p>
+                  <p className="text-white text-lg mt-2">Abuja, Nigeria</p>
+                  <p className="text-white/40 text-sm mt-1">Remote-first worldwide</p>
                 </div>
               </div>
 

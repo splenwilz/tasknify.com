@@ -65,29 +65,29 @@ export function FinalCTA() {
             <div className="space-y-6">
               <div>
                 <h4 className="font-semibold text-white mb-2">General Inquiries</h4>
-                <a 
-                  href="mailto:hello@tasknify.com" 
+                <a
+                  href="mailto:info@tasknify.com"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-                  hello@tasknify.com
+                  info@tasknify.com
                 </a>
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-2">Project Partnerships</h4>
-                <a 
-                  href="mailto:partners@tasknify.com" 
+                <a
+                  href="mailto:info@tasknify.com"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-                  partners@tasknify.com
+                  info@tasknify.com
                 </a>
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-2">Emergency Support</h4>
-                <a 
-                  href="mailto:emergency@tasknify.com" 
+                <a
+                  href="mailto:support@tasknify.com"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-                  emergency@tasknify.com
+                  support@tasknify.com
                 </a>
               </div>
             </div>
