@@ -64,12 +64,6 @@ export function Header() {
                 Case Studies
               </Link>
               <Link
-                href="#pricing"
-                className="text-white hover:text-[#00ffff] transition-colors text-base font-light tracking-[-0.02em] leading-[1.6]"
-              >
-                Pricing
-              </Link>
-              <Link
                 href="/contact"
                 className="text-white hover:text-[#00ffff] transition-colors text-base font-light tracking-[-0.02em] leading-[1.6]"
               >
@@ -156,13 +150,6 @@ export function Header() {
                 onClick={() => setIsMobileOpen(false)}
               >
                 Case Studies
-              </Link>
-              <Link
-                href="#pricing"
-                className="block py-2 text-white hover:text-[#00ffff] transition-colors text-base font-light tracking-[-0.02em] leading-[1.6]"
-                onClick={() => setIsMobileOpen(false)}
-              >
-                Pricing
               </Link>
               <Link
                 href="/contact"

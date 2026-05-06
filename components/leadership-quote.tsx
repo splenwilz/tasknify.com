@@ -41,7 +41,7 @@ export function LeadershipQuote() {
           <div className="w-16 h-16 rounded-full overflow-hidden border border-[#00ffff]/20">
             <Image
               src="/images/nightsec/leader.png"
-              alt="Jonas Kahnwald"
+              alt="Godswill William"
               width={64}
               height={64}
               className="w-full h-full object-cover"
@@ -50,8 +50,8 @@ export function LeadershipQuote() {
           {/* Signature line */}
           <div className="w-32 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
           <div>
-            <p className="text-white font-semibold">Jonas Kahnwald</p>
-            <p className="text-white/30 text-sm">CEO &amp; Founder</p>
+            <p className="text-white font-semibold">Godswill William</p>
+            <p className="text-white/30 text-sm">Founder &amp; Principal Engineer</p>
           </div>
         </div>
         </RevealOnScroll>

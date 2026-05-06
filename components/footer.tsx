@@ -32,7 +32,7 @@ export function Footer() {
             <p className="text-white/30 text-sm mb-3">
               Connect with our team for project estimates, technical consultations, or partnership opportunities.
             </p>
-            <p className="text-[#00ffff] text-sm">hello@tasknify.com</p>
+            <p className="text-[#00ffff] text-sm">info@tasknify.com</p>
           </div>
           <div>
             <p className="text-white text-sm font-medium mb-2">
@@ -50,7 +50,7 @@ export function Footer() {
             <p className="text-white/30 text-sm mb-3">
               Reach us instantly for quick consultations and project discussions, anytime you need.
             </p>
-            <p className="text-[#00ffff] text-sm">+1 (555) 123-4567</p>
+            <p className="text-[#00ffff] text-sm">+234 913 551 5251</p>
           </div>
         </div>
       </div>
@@ -98,9 +98,6 @@ export function Footer() {
               </Link>
               <Link href="/services" className="text-white/50 hover:text-white text-sm transition-colors">
                 Services
-              </Link>
-              <Link href="#pricing" className="text-white/50 hover:text-white text-sm transition-colors">
-                Pricing
               </Link>
             </nav>
           </div>
