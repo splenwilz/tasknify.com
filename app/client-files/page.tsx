@@ -81,6 +81,16 @@ const clientFiles = {
                 ]
             },
             {
+                name: "May Newsletter - Imagery",
+                path: "/biofarms/May Newsletter - Imagery",
+                files: [
+                    { name: "drone-rycote.png", size: "1.2 MB" },
+                    { name: "hero.jpg", size: "541 KB" },
+                    { name: "onyx-cornwall.jpg", size: "353 KB" },
+                    { name: "stacking-bng.jpg", size: "297 KB" },
+                ]
+            },
+            {
                 name: "Brand Assets",
                 path: "/biofarms/Brand Assets",
                 files: [
