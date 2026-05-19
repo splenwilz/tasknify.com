@@ -85,10 +85,11 @@ const clientFiles = {
                 path: "/biofarms/May Newsletter - Imagery",
                 files: [
                     { name: "cpd-newland.png", size: "738 KB" },
+                    { name: "drone-rycote.jpg", size: "409 KB" },
                     { name: "drone-rycote.png", size: "1.2 MB" },
                     { name: "hero.jpg", size: "541 KB" },
-                    { name: "onyx-cornwall.jpg", size: "353 KB" },
-                    { name: "stacking-bng.jpg", size: "297 KB" },
+                    { name: "onyx-cornwall.jpg", size: "542 KB" },
+                    { name: "stacking-bng.jpg", size: "353 KB" },
                 ]
             },
             {
