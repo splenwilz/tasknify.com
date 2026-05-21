@@ -77,6 +77,7 @@ const clientFiles = {
                 name: "May Emails - Imagery",
                 path: "/biofarms/May Emails - Imagery",
                 files: [
+                    { name: "team.jpg", size: "144 KB" },
                     { name: "UKREiiF.jpg", size: "446 KB" },
                 ]
             },
