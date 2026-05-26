@@ -78,6 +78,7 @@ const clientFiles = {
                 path: "/biofarms/May Emails - Imagery",
                 files: [
                     { name: "team.jpg", size: "144 KB" },
+                    { name: "UKREiiF-Official-Partner.jpg", size: "239 KB" },
                     { name: "UKREiiF.jpg", size: "446 KB" },
                 ]
             },
