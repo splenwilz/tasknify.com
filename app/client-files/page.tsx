@@ -95,6 +95,13 @@ const clientFiles = {
                 ]
             },
             {
+                name: "June Emails - Imagery",
+                path: "/biofarms/June Emails - Imagery",
+                files: [
+                    { name: "groundswell-banner.jpg", size: "362 KB" },
+                ]
+            },
+            {
                 name: "Brand Assets",
                 path: "/biofarms/Brand Assets",
                 files: [
