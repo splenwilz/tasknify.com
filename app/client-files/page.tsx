@@ -102,6 +102,16 @@ const clientFiles = {
                 ]
             },
             {
+                name: "June Newsletter - Imagery",
+                path: "/biofarms/June Newsletter - Imagery",
+                files: [
+                    { name: "climate-resilience.jpg", size: "350 KB" },
+                    { name: "lesnewth.jpg", size: "561 KB" },
+                    { name: "nature-supply-chain.jpg", size: "277 KB" },
+                    { name: "sleight-botanical.jpg", size: "261 KB" },
+                ]
+            },
+            {
                 name: "Brand Assets",
                 path: "/biofarms/Brand Assets",
                 files: [
