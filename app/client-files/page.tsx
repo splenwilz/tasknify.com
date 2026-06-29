@@ -109,6 +109,8 @@ const clientFiles = {
                     { name: "lesnewth.jpg", size: "561 KB" },
                     { name: "nature-supply-chain.jpg", size: "277 KB" },
                     { name: "sleight-botanical.jpg", size: "261 KB" },
+                    { name: "wildlife-monitoring-night.jpg", size: "139 KB" },
+                    { name: "wildlife-monitoring.jpg", size: "237 KB" },
                 ]
             },
             {
