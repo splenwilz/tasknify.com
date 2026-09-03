@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import Script from "next/script"
 import { Inter, Paytone_One } from "next/font/google"
 import { UISounds } from "@/components/ui-sounds"
 import "./globals.css"
@@ -31,6 +32,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${paytoneOne.variable} antialiased`}>
       <body className="font-sans">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CDHXPNBBSQ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CDHXPNBBSQ');
+          `}
+        </Script>
         <UISounds />
         {children}
       </body>
