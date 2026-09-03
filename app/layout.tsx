@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${paytoneOne.variable} antialiased`}>
       <body className="font-sans">
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-CDHXPNBBSQ"
+          src="https://www.googletagmanager.com/gtag/js?id=G-K5QTBSQGZV"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -41,7 +41,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-CDHXPNBBSQ');
+            gtag('config', 'G-K5QTBSQGZV');
           `}
         </Script>
         <UISounds />
