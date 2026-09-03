@@ -6,6 +6,7 @@ import { useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Loader2, CheckCircle } from "lucide-react"
+import { trackEvent } from "@/lib/gtm"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -52,6 +53,7 @@ export default function ContactPage() {
           email: "",
           message: "",
         })
+        trackEvent({ event: "contact_form_submit", form_location: "contact_page" })
       } else {
         setError(result.error || "Something went wrong. Please try again.")
       }

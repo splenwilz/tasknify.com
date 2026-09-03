@@ -3,6 +3,7 @@
 import type React from "react"
 import { useState } from "react"
 import { Loader2 } from "lucide-react"
+import { trackEvent } from "@/lib/gtm"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -33,6 +34,7 @@ export function ContactSection() {
       if (response.ok) {
         setIsSubmitted(true)
         setFormData({ firstName: "", lastName: "", email: "", message: "" })
+        trackEvent({ event: "contact_form_submit", form_location: "homepage" })
       }
     } catch {
       // Handle error silently

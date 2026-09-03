@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
 import { useState } from "react"
 import { CheckCircle, Loader2, Mail } from "lucide-react"
+import { trackEvent } from "@/lib/gtm"
 
 interface NewsletterSignupProps {
   variant?: "default" | "compact" | "inline"
@@ -38,6 +39,7 @@ export function NewsletterSignup({ variant = "default", className = "" }: Newsle
       if (response.ok) {
         setIsSubscribed(true)
         setEmail("")
+        trackEvent({ event: "newsletter_signup", form_variant: variant })
       } else {
         setError(result.error || "Something went wrong. Please try again.")
       }
