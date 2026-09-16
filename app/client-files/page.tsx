@@ -114,6 +114,18 @@ const clientFiles = {
                 ]
             },
             {
+                name: "September Newsletter - Imagery",
+                path: "/biofarms/September Newsletter - Imagery",
+                files: [
+                    { name: "badger-bank-richard-graham.jpg", size: "375 KB" },
+                    { name: "lesnewth-activation.jpg", size: "367 KB" },
+                    { name: "padel-mk.jpg", size: "227 KB" },
+                    { name: "policy-fact-file-crane.png", size: "585 KB" },
+                    { name: "westbourne-tree-canopy.jpg", size: "420 KB" },
+                    { name: "worth-abbey-community-day.jpg", size: "360 KB" },
+                ]
+            },
+            {
                 name: "Brand Assets",
                 path: "/biofarms/Brand Assets",
                 files: [
