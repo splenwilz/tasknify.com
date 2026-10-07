@@ -42,6 +42,30 @@ const currentProjects = [
 
 const completedProjects = [
   {
+    badge: "Health & Fitness",
+    name: "Pepmax",
+    description:
+      "Native iOS peptide dose tracker with a reconstitution calculator, dose log, vial inventory and cycle tracking. Live on the App Store.",
+    metrics: [
+      { value: "Live", label: "On the App Store" },
+      { value: "10 wks", label: "Kickoff to launch" },
+    ],
+    tech: ["React Native", "Expo", "tRPC", "MongoDB"],
+    href: "/case-studies/pepmax",
+  },
+  {
+    badge: "Photo Booth · Mobile",
+    name: "BoothIQ Mobile",
+    description:
+      "Companion app to the BoothIQ photo booth software we built: live revenue, hardware alerts, remote control and a template store.",
+    metrics: [
+      { value: "iOS + Android", label: "One codebase" },
+      { value: "130", label: "Test files, TDD" },
+    ],
+    tech: ["React Native", "Expo", "StoreKit", "Push"],
+    href: "/case-studies/boothiq-mobile",
+  },
+  {
     badge: "FinTech",
     name: "FinanceFlow",
     description:

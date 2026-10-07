@@ -5,6 +5,30 @@ import { RevealOnScroll } from "./reveal-on-scroll"
 
 const projects = [
   {
+    badge: "Health & Fitness",
+    name: "Pepmax",
+    description:
+      "Native iOS peptide dose tracker with a reconstitution calculator, dose log, vial inventory and cycle tracking. Built and shipped to the App Store in ten weeks.",
+    metrics: [
+      { value: "Live", label: "On the App Store" },
+      { value: "10 wks", label: "Kickoff to launch" },
+    ],
+    tech: ["React Native", "Expo", "tRPC", "MongoDB"],
+    href: "/case-studies/pepmax",
+  },
+  {
+    badge: "Photo Booth · Mobile",
+    name: "BoothIQ Mobile",
+    description:
+      "Companion app to the BoothIQ photo booth software we built: live revenue, hardware alerts, remote control and a template store, for iOS and Android.",
+    metrics: [
+      { value: "iOS + Android", label: "One codebase" },
+      { value: "130", label: "Test files, TDD" },
+    ],
+    tech: ["React Native", "Expo", "StoreKit", "Push"],
+    href: "/case-studies/boothiq-mobile",
+  },
+  {
     badge: "FinTech",
     name: "FinanceFlow",
     description:
@@ -63,9 +87,10 @@ export function PastProjects() {
         <RevealOnScroll>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
-              <div
+              <Link
                 key={project.name}
-                className="neon-card rounded-xl p-8 bg-[#0a0a0a] group"
+                href={"href" in project && project.href ? project.href : "/case-studies"}
+                className="neon-card rounded-xl p-8 bg-[#0a0a0a] group block"
               >
                 {/* Badge */}
                 <div className="inline-flex items-center bg-[#00ffff]/5 border border-[#00ffff]/20 rounded-full px-3 py-1 mb-5">
@@ -103,7 +128,7 @@ export function PastProjects() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </RevealOnScroll>
