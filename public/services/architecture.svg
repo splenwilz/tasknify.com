@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><radialGradient id="glow" cx="50%" cy="50%" r="55%"><stop offset="0" stop-color="#00b3c6" stop-opacity=".45"/><stop offset=".6" stop-color="#00b3c6" stop-opacity=".08"/><stop offset="1" stop-color="#00b3c6" stop-opacity="0"/></radialGradient><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1622"/><stop offset="1" stop-color="#060a10"/></linearGradient><linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#12202e"/><stop offset="1" stop-color="#0b141d"/></linearGradient><filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter><pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#00ffff" fill-opacity=".10"/></pattern></defs><rect width="400" height="300" fill="url(#bg)"/><rect width="400" height="300" fill="url(#dots)"/><ellipse cx="200" cy="150" rx="210" ry="160" fill="url(#glow)"/>
+<g transform="translate(180 0)">
+<g opacity=".95">
+<path d="M0 200 L110 245 L0 290 L-110 245 Z" fill="#0b1823" stroke="#00ffff" stroke-opacity=".35" stroke-width="1.5"/>
+<path d="M-110 245 L-110 230 L0 185 L110 230 L110 245" fill="none" stroke="#00ffff" stroke-opacity=".2"/>
+<path d="M0 185 L110 230 L0 275 L-110 230 Z" fill="url(#panel)" stroke="#00ffff" stroke-opacity=".55" stroke-width="1.5"/>
+<g fill="none" stroke="#00ffff" stroke-opacity=".6" stroke-width="1.5"><ellipse cx="-40" cy="230" rx="18" ry="7"/><path d="M-58 230 v10 a18 7 0 0 0 36 0 v-10"/><ellipse cx="40" cy="230" rx="18" ry="7"/><path d="M22 230 v10 a18 7 0 0 0 36 0 v-10"/></g>
+</g>
+<path d="M0 115 L110 160 L0 205 L-110 160 Z" fill="url(#panel)" stroke="#00ffff" stroke-opacity=".7" stroke-width="1.5"/>
+<g stroke="#00ffff" stroke-width="2" stroke-linecap="round"><path d="M-55 160 L-15 176"/><path d="M-30 150 L10 166"/><path d="M-5 140 L35 156"/></g>
+<circle cx="45" cy="160" r="6" fill="#00ffff"/>
+<path d="M0 45 L110 90 L0 135 L-110 90 Z" fill="#00ffff" fill-opacity=".10" stroke="#00ffff" stroke-width="2"/>
+<path d="M0 45 L110 90 L0 135 L-110 90 Z" fill="none" stroke="#bfefff" stroke-opacity=".35" stroke-width="1" filter="url(#soft)"/>
+<g fill="#00ffff"><rect x="-62" y="80" width="30" height="20" rx="3" transform="skewY(22) translate(0 0)" fill-opacity=".0"/></g>
+<path d="M-60 88 L-20 72 L20 88 L-20 104 Z" fill="#00b3c6" fill-opacity=".6" stroke="#00ffff" stroke-width="1.2"/>
+<path d="M10 100 L40 88 L70 100 L40 112 Z" fill="#00ffff" fill-opacity=".25" stroke="#00ffff" stroke-width="1.2"/>
+<g stroke="#00ffff" stroke-dasharray="3 5" stroke-width="1.5"><path d="M0 135 V115"/><path d="M-80 102 V148"/><path d="M80 102 V148"/><path d="M0 205 V185"/><path d="M-80 172 V218"/><path d="M80 172 V218"/></g>
+<g fill="#00ffff"><circle cx="-80" cy="102" r="3"/><circle cx="80" cy="102" r="3"/><circle cx="-80" cy="172" r="3"/><circle cx="80" cy="172" r="3"/></g>
+</g>
+<g font-family="Inter,Arial,sans-serif" font-size="11" fill="#00ffff" fill-opacity=".8" letter-spacing="1.5"><text x="304" y="96">APP</text><text x="304" y="166">API</text><text x="304" y="236">DATA</text></g>
+<g stroke="#00ffff" stroke-opacity=".3"><path d="M298 92 H282"/><path d="M298 162 H282"/><path d="M298 232 H282"/></g>
+</svg>

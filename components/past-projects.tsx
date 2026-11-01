@@ -22,44 +22,59 @@ const projects = [
     description:
       "Companion app to the BoothIQ photo booth software we built: live revenue, hardware alerts, remote control and a template store, for iOS and Android.",
     metrics: [
-      { value: "iOS + Android", label: "One codebase" },
+      { value: "Live", label: "On the App Store" },
       { value: "130", label: "Test files, TDD" },
     ],
     tech: ["React Native", "Expo", "StoreKit", "Push"],
     href: "/case-studies/boothiq-mobile",
   },
   {
-    badge: "FinTech",
-    name: "FinanceFlow",
+    badge: "PropTech · Elevator industry",
+    name: "Lift AI",
     description:
-      "Rebuilt a fintech MVP into an enterprise-grade platform processing millions of transactions daily, scaling from 1,000 to 2M+ users.",
+      "Seven months embedded in Lift AI's asset-management platform: service contracts, KPI targets, compliance tracking and insight reports on a Django API and React web app.",
     metrics: [
-      { value: "2M+", label: "Active Users" },
-      { value: "$50M", label: "Series B Raised" },
+      { value: "7 mo", label: "Full time, 2024 to 2025" },
+      { value: "217", label: "Commits shipped" },
     ],
-    tech: ["React", "Node.js", "AWS", "PostgreSQL"],
+    tech: ["Django", "DRF", "React", "TypeScript"],
+    href: "/case-studies/lift-ai",
   },
   {
-    badge: "Healthcare",
-    name: "HealthTech Platform",
+    badge: "Photo Booth · Web",
+    name: "BoothIQ Web Dashboard",
     description:
-      "Built a HIPAA-compliant telemedicine platform with EHR integrations, serving hundreds of thousands of patients nationwide.",
+      "boothiq.com: the operator dashboard, admin panel, store, template marketplace and operator docs, on the same API as the kiosk and the mobile app.",
     metrics: [
-      { value: "500K+", label: "Patients Served" },
-      { value: "15+", label: "EHR Integrations" },
+      { value: "389", label: "Commits since Jan 2026" },
+      { value: "4", label: "Surfaces in one codebase" },
     ],
-    tech: ["React", "Node.js", "HIPAA", "AWS"],
+    tech: ["Next.js 16", "React 19", "Tailwind 4", "FastAPI"],
+    href: "/case-studies/boothiq-dashboard",
   },
   {
-    badge: "Retail",
-    name: "E-commerce Optimization",
+    badge: "Publishing · Web & mobile",
+    name: "The Bible Says",
     description:
-      "Optimized checkout flow and recommendation engine for a Fortune 500 retailer, driving measurable revenue growth.",
+      "Thirteen months as the WordPress and React developer on Navigo's online Bible commentary platform, across the content backend, the web front end and the mobile apps.",
     metrics: [
-      { value: "40%", label: "Conversion Increase" },
-      { value: "$50M", label: "Additional Revenue" },
+      { value: "13 mo", label: "Jul 2023 to Jul 2024" },
+      { value: "iOS + Android", label: "Apps in both stores" },
     ],
-    tech: ["Python", "ML", "Redis", "Kubernetes"],
+    tech: ["WordPress", "React", "React Native", "REST"],
+    href: "/case-studies/thebiblesays",
+  },
+  {
+    badge: "Real estate · WordPress",
+    name: "Archer Property Partners",
+    description:
+      "A WordPress site for a medical real-estate investment firm, built from a marketing agency's design and launched in four weeks.",
+    metrics: [
+      { value: "4 wks", label: "Kickoff to launch" },
+      { value: "3", label: "Audience journeys" },
+    ],
+    tech: ["WordPress", "PHP", "SEO"],
+    href: "/case-studies/archer-property-partners",
   },
 ]
 
@@ -70,7 +85,7 @@ export function PastProjects() {
         {/* Section header */}
         <RevealOnScroll>
           <div className="mb-16 max-w-2xl">
-            <span className="text-[#00ff73] text-xs font-medium tracking-[0.2em] uppercase">
+            <span className="text-[#00ffff] text-xs font-medium tracking-[0.2em] uppercase">
               Portfolio
             </span>
             <h2 className="font-display text-3xl md:text-5xl text-white mt-3 mb-6">

@@ -5,18 +5,21 @@ import type { CaseStudyData } from "@/components/case-study-page"
 
 const data: CaseStudyData = {
   badge: "Photo Booth · Mobile",
-  status: "In Review",
+  status: "Completed",
   name: "BoothIQ Mobile",
   tagline: "Every booth. One app. The mobile companion to the BoothIQ photo booth software we built.",
   summary:
     "BoothIQ is a photo booth platform we built: software that runs each booth, a web dashboard, and this mobile companion app. BoothIQ Mobile is the operator's remote control for the fleet: live revenue and hardware health per booth, severity-filtered push alerts, analytics in each booth's time zone, QR pairing with remote restart and credits, and a template store with StoreKit purchases. Built with React Native and Expo for iOS and Android.",
   metrics: [
-    { value: "iOS + Android", label: "One codebase" },
+    { value: "Live", label: "On the App Store" },
     { value: "130", label: "Test files, built with TDD" },
     { value: "3", label: "BoothIQ apps on one API" },
     { value: "9 mo", label: "Dec 2025 to Sep 2026" },
   ],
-  links: [{ label: "boothiq.com", href: "https://boothiq.com" }],
+  links: [
+    { label: "View on the App Store", href: "https://apps.apple.com/us/app/boothiq/id6783490814" },
+    { label: "boothiq.com", href: "https://boothiq.com" },
+  ],
   gallery: [
     { src: "/case-studies/boothiq-mobile/01-cover.jpg", alt: "BoothIQ Mobile cover with two iPhones showing the booths list and dashboard", caption: "Companion to the BoothIQ photo booth software. React Native, iOS and Android." },
     { src: "/case-studies/boothiq-mobile/02-dashboard.jpg", alt: "BoothIQ live dashboard screen", caption: "Fleet or per-booth revenue, transactions and upsells, plus printer, camera and payment health." },
@@ -26,7 +29,7 @@ const data: CaseStudyData = {
     { src: "/case-studies/boothiq-mobile/06-store.jpg", alt: "BoothIQ template store and template detail screens", caption: "Browse, buy and sync print templates to any booth. StoreKit purchases, ratings and reviews." },
     { src: "/case-studies/boothiq-mobile/07-pairing.jpg", alt: "BoothIQ add-booth form and QR scanner screens", caption: "Create a booth, scan the QR code the booth software shows. Remote restart, credits and payments follow." },
     { src: "/case-studies/boothiq-mobile/08-stack.jpg", alt: "BoothIQ Mobile architecture and technology stack", caption: "One of three BoothIQ apps on one REST API. React Native 0.86, Expo 57, QR, APNs/FCM push, StoreKit." },
-    { src: "/case-studies/boothiq-mobile/09-closer.jpg", alt: "BoothIQ analytics and booths screens", caption: "BoothIQ Mobile for iOS and Android." },
+    { src: "/case-studies/boothiq-mobile/09-closer.jpg", alt: "BoothIQ analytics and booths screens", caption: "BoothIQ Mobile, live on the App Store for iOS, with Android on the same codebase." },
   ],
   timeline: [
     {
@@ -53,9 +56,9 @@ const data: CaseStudyData = {
     {
       title: "Compliance and store release",
       date: "September 2026",
-      status: "in-progress",
+      status: "completed",
       description:
-        "Hardened licensing activation and error states, corroborated the StoreKit storefront before enabling purchases, aligned the Android build with Google Play's payments policy, and wired FCM push with a minimal permission set. Store review in progress.",
+        "Hardened licensing activation and error states, corroborated the StoreKit storefront before enabling purchases, aligned the Android build with Google Play's payments policy, and wired FCM push with a minimal permission set. Passed App Review and went live on the App Store as BoothIQ.",
     },
   ],
   challenges: [

@@ -93,11 +93,17 @@ export function Footer() {
               <Link href="/about" className="text-white/50 hover:text-white text-sm transition-colors">
                 About
               </Link>
-              <Link href="#features" className="text-white/50 hover:text-white text-sm transition-colors">
-                Features
-              </Link>
               <Link href="/services" className="text-white/50 hover:text-white text-sm transition-colors">
                 Services
+              </Link>
+              <Link href="/case-studies" className="text-white/50 hover:text-white text-sm transition-colors">
+                Case Studies
+              </Link>
+              <Link href="/process" className="text-white/50 hover:text-white text-sm transition-colors">
+                Process
+              </Link>
+              <Link href="/faq" className="text-white/50 hover:text-white text-sm transition-colors">
+                FAQ
               </Link>
             </nav>
           </div>

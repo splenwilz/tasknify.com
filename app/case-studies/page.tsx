@@ -5,41 +5,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { RevealOnScroll } from "@/components/reveal-on-scroll"
 
-const currentProjects = [
-  {
-    name: "Logistics Management Platform",
-    badge: "Logistics",
-    description:
-      "End-to-end fleet management and route optimization platform with real-time GPS tracking, automated dispatch, and driver mobile app.",
-    started: "Jan 2026",
-    estDelivery: "Jun 2026",
-    phases: [
-      { label: "Discovery", status: "completed" as const },
-      { label: "Design", status: "completed" as const },
-      { label: "Development", status: "in-progress" as const },
-      { label: "QA", status: "upcoming" as const },
-      { label: "Launch", status: "upcoming" as const },
-    ],
-    tech: ["Next.js", "Go", "PostgreSQL", "Redis", "AWS"],
-  },
-  {
-    name: "AI-Powered Hiring Platform",
-    badge: "HR Tech",
-    description:
-      "Intelligent recruitment platform with resume parsing, candidate scoring, and automated interview scheduling for enterprise hiring teams.",
-    started: "Feb 2026",
-    estDelivery: "Aug 2026",
-    phases: [
-      { label: "Discovery", status: "completed" as const },
-      { label: "Design", status: "in-progress" as const },
-      { label: "Development", status: "upcoming" as const },
-      { label: "QA", status: "upcoming" as const },
-      { label: "Launch", status: "upcoming" as const },
-    ],
-    tech: ["React", "Python", "OpenAI", "PostgreSQL", "GCP"],
-  },
-]
-
 const completedProjects = [
   {
     badge: "Health & Fitness",
@@ -59,55 +24,113 @@ const completedProjects = [
     description:
       "Companion app to the BoothIQ photo booth software we built: live revenue, hardware alerts, remote control and a template store.",
     metrics: [
-      { value: "iOS + Android", label: "One codebase" },
+      { value: "Live", label: "On the App Store" },
       { value: "130", label: "Test files, TDD" },
     ],
     tech: ["React Native", "Expo", "StoreKit", "Push"],
     href: "/case-studies/boothiq-mobile",
   },
   {
-    badge: "FinTech",
-    name: "FinanceFlow",
+    badge: "PropTech · Elevator industry",
+    name: "Lift AI",
     description:
-      "Rebuilt a fintech MVP into an enterprise-grade platform processing millions of transactions daily.",
+      "Seven months embedded in Lift AI's asset-management platform: service contracts, KPI targets, compliance tracking and insight reports on a Django API and React web app.",
     metrics: [
-      { value: "2M+", label: "Active Users" },
-      { value: "$50M", label: "Series B Raised" },
+      { value: "7 mo", label: "Full time, 2024 to 2025" },
+      { value: "217", label: "Commits shipped" },
     ],
-    tech: ["React", "Node.js", "AWS", "PostgreSQL"],
-    href: "/case-studies/financeflow",
+    tech: ["Django", "DRF", "React", "TypeScript"],
+    href: "/case-studies/lift-ai",
   },
   {
-    badge: "Healthcare",
-    name: "HealthTech Platform",
+    badge: "Photo Booth · Desktop",
+    name: "BoothIQ Booth Software",
     description:
-      "Built a HIPAA-compliant telemedicine platform with EHR integrations serving patients nationwide.",
+      "The Windows application inside a coin-operated photo booth: Arduino payments, capture, dye-sub printing, offline-first sync, QR licensing and encrypted backups.",
     metrics: [
-      { value: "500K+", label: "Patients Served" },
-      { value: "15+", label: "EHR Integrations" },
+      { value: "~12 s", label: "Capture to print" },
+      { value: "Offline", label: "Sells without internet" },
     ],
-    tech: ["React", "Node.js", "HIPAA", "AWS"],
-    href: "/case-studies/healthtech-platform",
+    tech: ["C#", "WPF", "Arduino", "FastAPI"],
+    href: "/case-studies/boothiq-software",
   },
   {
-    badge: "Retail",
-    name: "E-commerce Optimization",
+    badge: "Photo Booth · Web",
+    name: "BoothIQ Web Dashboard",
     description:
-      "Optimized checkout flow and recommendation engine for a Fortune 500 retailer.",
+      "boothiq.com: the operator dashboard, admin panel, store, template marketplace and operator docs, on the same API as the kiosk and the mobile app.",
     metrics: [
-      { value: "40%", label: "Conversion Increase" },
-      { value: "$50M", label: "Additional Revenue" },
+      { value: "389", label: "Commits since Jan 2026" },
+      { value: "4", label: "Surfaces in one codebase" },
     ],
-    tech: ["Python", "ML", "Redis", "Kubernetes"],
-    href: "/case-studies",
+    tech: ["Next.js 16", "React 19", "Tailwind 4", "FastAPI"],
+    href: "/case-studies/boothiq-dashboard",
+  },
+  {
+    badge: "Publishing · Web & mobile",
+    name: "The Bible Says",
+    description:
+      "Thirteen months as the WordPress and React developer on Navigo's online Bible commentary platform, across the content backend, the web front end and the iOS and Android apps.",
+    metrics: [
+      { value: "13 mo", label: "Jul 2023 to Jul 2024" },
+      { value: "iOS + Android", label: "Apps in both stores" },
+    ],
+    tech: ["WordPress", "React", "React Native", "REST"],
+    href: "/case-studies/thebiblesays",
+  },
+  {
+    badge: "Email · Newsletters",
+    name: "Email Development",
+    description:
+      "Customer.io and Iterable templates, a monthly publisher newsletter, and nine issues of Biofarm's newsletter: table-based HTML that renders in every client.",
+    metrics: [
+      { value: "4", label: "Clients, 2024 to 2026" },
+      { value: "11 mo", label: "Longest engagement" },
+    ],
+    tech: ["HTML email", "Customer.io", "Iterable", "MSO"],
+    href: "/case-studies/email-development",
+  },
+  {
+    badge: "Real estate · WordPress",
+    name: "Archer Property Partners",
+    description:
+      "A WordPress site for a medical real-estate investment firm, built from a marketing agency's design and launched in four weeks.",
+    metrics: [
+      { value: "4 wks", label: "Kickoff to launch" },
+      { value: "3", label: "Audience journeys" },
+    ],
+    tech: ["WordPress", "PHP", "SEO"],
+    href: "/case-studies/archer-property-partners",
+  },
+  {
+    badge: "Food science · DevOps",
+    name: "Shelf Life Testing Platform",
+    description:
+      "A FastAPI and SQLite lab platform deployed to Render with a persistent disk and GitHub auto-deploy, then documented and handed over.",
+    metrics: [
+      { value: "3", label: "Milestones delivered" },
+      { value: "Auto", label: "Deploy on merge" },
+    ],
+    tech: ["FastAPI", "SQLite", "Render"],
+    href: "/case-studies/shelf-life-platform",
   },
 ]
 
-const aggregateStats = [
-  { value: "$2B+", label: "Client Valuations" },
-  { value: "50+", label: "Products Shipped" },
-  { value: "99.9%", label: "Average Uptime" },
-  { value: "10M+", label: "End Users" },
+const engagements = [
+  { client: "BoothIQ", work: "Coin-operated photo booth software, web dashboard and mobile app", period: "May 2025 to date", type: "Hourly" },
+  { client: "Foresight Food", work: "FastAPI platform deployment to Render with persistent SQLite and auto-deploy", period: "Jun 2026", type: "Fixed price" },
+  { client: "Publisher (monthly)", work: "HTML newsletter coding, one issue a month", period: "Jan 2026 to date", type: "Hourly" },
+  { client: "Biofarm (UK)", work: "Monthly newsletters, brand assets, web and roller-banner prototypes", period: "Jan 2026 to date", type: "Monthly" },
+  { client: "OneBite Marketing", work: "Archer Property Partners WordPress site", period: "Dec 2025 to Jan 2026", type: "Hourly" },
+  { client: "Viral Ventures", work: "Pepmax: iOS peptide dose tracker, API, marketing site, App Store release", period: "Jun to Aug 2026", type: "Project" },
+  { client: "Sagetap", work: "Customer.io campaign templates from Figma", period: "Nov 2024 to Oct 2025", type: "Hourly" },
+  { client: "Lift AI", work: "Full-stack React and Django engineer on an elevator asset-management platform", period: "Nov 2024 to Jun 2025", type: "Hourly, 40 h/wk" },
+  { client: "Shrimal Dharmik", work: "Farm management Flask app: stock mobs, paddocks, pasture totals", period: "Oct to Nov 2024", type: "Fixed price" },
+  { client: "ParentData", work: "Iterable newsletter template", period: "Aug 2024", type: "Hourly" },
+  { client: "Media AI", work: "MVP web application build", period: "Jul to Nov 2024", type: "Hourly, 40 h/wk" },
+  { client: "Navigo, Inc", work: "WordPress and React developer on thebiblesays.com and its apps", period: "Jul 2023 to Jul 2024", type: "Hourly" },
+  { client: "The Project Studio, West", work: "ChatGPT article generator with cited sources; React app synced with a Unity game via PlayFab", period: "Mar 2023 to Feb 2024", type: "Fixed price" },
+  { client: "New Cos", work: "Django, jQuery and Bootstrap CRUD application", period: "Mar to Aug 2023", type: "Fixed price" },
 ]
 
 export default function CaseStudiesPage() {
@@ -138,7 +161,7 @@ export default function CaseStudiesPage() {
           </div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <RevealOnScroll>
-              <span className="text-[#00ff73] text-xs font-medium tracking-[0.2em] uppercase">
+              <span className="text-[#00ffff] text-xs font-medium tracking-[0.2em] uppercase">
                 Case Studies
               </span>
               <h1 className="font-display text-4xl md:text-6xl text-white mt-4 mb-6">
@@ -152,109 +175,13 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* Current Projects */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <RevealOnScroll>
-              <div className="flex items-center gap-3 mb-10">
-                <div className="w-2 h-2 rounded-full bg-[#00ffff] animate-pulse-dot" />
-                <span className="text-[#00ffff] text-sm font-medium tracking-wide uppercase">
-                  In Progress
-                </span>
-              </div>
-            </RevealOnScroll>
-
-            <div className="grid lg:grid-cols-2 gap-6">
-              {currentProjects.map((project) => (
-                <RevealOnScroll key={project.name}>
-                  <div className="neon-card rounded-xl p-8 bg-[#0a0a0a] border-l-2 border-l-[#00ffff]/40">
-                    {/* Badge + name */}
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="text-xs bg-[#00ffff]/5 border border-[#00ffff]/20 text-[#00ffff] rounded-full px-3 py-1">
-                        {project.badge}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
-                      {project.name}
-                    </h3>
-                    <p className="text-sm text-white/40 leading-relaxed mb-6">
-                      {project.description}
-                    </p>
-
-                    {/* Phase progress */}
-                    <div className="mb-6">
-                      <div className="flex items-center justify-between mb-4">
-                        {project.phases.map((phase, i) => {
-                          const isCompleted = phase.status === "completed"
-                          const isActive = phase.status === "in-progress"
-                          return (
-                            <div key={phase.label} className="flex items-center flex-1">
-                              <div className="flex flex-col items-center">
-                                <div
-                                  className={`w-3 h-3 rounded-full ${
-                                    isActive
-                                      ? "bg-[#00ffff] shadow-[0_0_10px_rgba(0,255,255,0.5)] animate-pulse-dot"
-                                      : isCompleted
-                                      ? "bg-[#00ff73]"
-                                      : "border border-white/20 bg-transparent"
-                                  }`}
-                                />
-                                <span
-                                  className={`text-[10px] mt-2 whitespace-nowrap ${
-                                    isActive
-                                      ? "text-[#00ffff]"
-                                      : isCompleted
-                                      ? "text-[#00ff73]/60"
-                                      : "text-white/20"
-                                  }`}
-                                >
-                                  {phase.label}
-                                </span>
-                              </div>
-                              {i < project.phases.length - 1 && (
-                                <div
-                                  className={`flex-1 h-px mx-2 mb-5 ${
-                                    isCompleted ? "bg-[#00ff73]/30" : "bg-white/10"
-                                  }`}
-                                />
-                              )}
-                            </div>
-                          )
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Dates + tech */}
-                    <div className="flex flex-wrap items-center justify-between gap-4">
-                      <div className="flex gap-6 text-xs text-white/30">
-                        <span>Started: <span className="text-white/50">{project.started}</span></span>
-                        <span>Est. Delivery: <span className="text-white/50">{project.estDelivery}</span></span>
-                      </div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {project.tech.map((t) => (
-                          <span
-                            key={t}
-                            className="text-[10px] text-white/40 px-2 py-0.5 rounded bg-white/5 border border-white/10"
-                          >
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </RevealOnScroll>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Completed Projects */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <RevealOnScroll>
               <div className="flex items-center gap-3 mb-10">
-                <div className="w-2 h-2 rounded-full bg-[#00ff73]" />
-                <span className="text-[#00ff73] text-sm font-medium tracking-wide uppercase">
+                <div className="w-2 h-2 rounded-full bg-[#00ffff]" />
+                <span className="text-[#00ffff] text-sm font-medium tracking-wide uppercase">
                   Delivered
                 </span>
               </div>
@@ -310,20 +237,37 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* Aggregate Results */}
+        {/* Engagement history */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <RevealOnScroll>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {aggregateStats.map((stat) => (
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-2 h-2 rounded-full bg-[#00ffff]" />
+                <span className="text-[#00ffff] text-sm font-medium tracking-wide uppercase">
+                  Engagement History
+                </span>
+              </div>
+              <p className="text-sm text-white/40 mb-10 max-w-2xl">
+                Client work since 2023, most recent first. References available on request.
+              </p>
+            </RevealOnScroll>
+            <RevealOnScroll>
+              <div className="neon-card rounded-xl bg-[#0a0a0a] overflow-hidden">
+                <div className="hidden md:grid grid-cols-[1.2fr_2.4fr_1.1fr_0.9fr] gap-4 px-6 py-3 text-[11px] uppercase tracking-wider text-white/30 border-b border-white/5">
+                  <span>Client</span>
+                  <span>Work</span>
+                  <span>Period</span>
+                  <span>Engagement</span>
+                </div>
+                {engagements.map((e) => (
                   <div
-                    key={stat.label}
-                    className="neon-card rounded-xl p-6 bg-[#0a0a0a] text-center"
+                    key={`${e.client}-${e.period}`}
+                    className="grid md:grid-cols-[1.2fr_2.4fr_1.1fr_0.9fr] gap-1 md:gap-4 px-6 py-4 border-b border-white/5 last:border-b-0 text-sm"
                   >
-                    <div className="text-3xl md:text-4xl font-bold text-[#00ffff] mb-2">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-white/40">{stat.label}</div>
+                    <span className="text-white font-medium">{e.client}</span>
+                    <span className="text-white/50">{e.work}</span>
+                    <span className="text-white/40">{e.period}</span>
+                    <span className="text-white/30">{e.type}</span>
                   </div>
                 ))}
               </div>

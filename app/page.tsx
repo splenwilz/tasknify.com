@@ -7,7 +7,6 @@ import { ComprehensiveProtection } from "@/components/comprehensive-protection"
 import { PastProjects } from "@/components/past-projects"
 import { ActiveThreatsGlobe } from "@/components/active-threats-globe"
 import { PricingSection } from "@/components/pricing-section"
-import { TestimonialSection } from "@/components/testimonial-section"
 import { CtaSection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
@@ -24,7 +23,6 @@ export default function HomePage() {
         <PastProjects />
         <ActiveThreatsGlobe />
         <PricingSection />
-        <TestimonialSection />
         <CtaSection />
       </main>
       <Footer />

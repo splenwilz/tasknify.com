@@ -82,20 +82,6 @@ export function Hero() {
         </RevealOnScroll>
       </div>
 
-      {/* Trusted by section at bottom */}
-      <div className="absolute bottom-8 sm:bottom-12 left-0 right-0 z-10">
-        <p className="text-center text-xs text-white/30 mb-4 tracking-wider">
-          Trusted by top innovative teams
-        </p>
-        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 px-4">
-          {["Vercel", "Stripe", "Loom", "APEX", "Quantum", "Celestial", "Basecamp", "Linear"].map((name) => (
-            <span key={name} className="text-white/20 text-sm font-medium tracking-wide">
-              {name}
-            </span>
-          ))}
-        </div>
-      </div>
-
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050505] to-transparent" />
     </section>

@@ -1,0 +1,88 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Tasknify flyer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+@page{size:A4;margin:0}
+html,body{margin:0;padding:0;background:#040913}
+*{box-sizing:border-box}
+.page{position:relative;width:210mm;height:297mm;overflow:hidden;background:#040913;color:#fff;font-family:Inter,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.g1{position:absolute;left:-60mm;top:-80mm;width:220mm;height:170mm;background:radial-gradient(closest-side,rgba(8,126,164,.5),rgba(4,89,117,.22) 45%,transparent 72%)}
+.g2{position:absolute;left:60mm;top:-40mm;width:160mm;height:120mm;background:radial-gradient(closest-side,rgba(88,196,220,.12),transparent 70%)}
+.g3{position:absolute;left:-40mm;bottom:-70mm;width:200mm;height:140mm;background:radial-gradient(closest-side,rgba(8,126,164,.28),transparent 70%)}
+.globe{position:absolute;right:-62mm;top:-26mm;width:150mm;height:150mm;opacity:.9}
+.vig{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,9,19,0) 0%,rgba(4,9,19,0) 55%,rgba(4,9,19,.3) 100%)}
+.in{position:absolute;inset:0;padding:14mm 16mm 12mm}
+.top{display:flex;justify-content:space-between;align-items:center}
+.top img{height:9.5mm}
+.top span{font-size:9.5pt;color:rgba(255,255,255,.6);letter-spacing:.02em}
+.eyebrow{font-size:8.5pt;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#58C4DC}
+h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:40pt;letter-spacing:-.03em;line-height:1;margin:4mm 0 0}
+.sub{font-size:13pt;color:rgba(255,255,255,.78);margin-top:4mm;max-width:120mm;line-height:1.35}
+.proof{display:flex;gap:4mm;margin-top:7mm}
+.proof div{flex:1;border:.4mm solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);border-radius:3mm;padding:4mm 4.5mm}
+.proof b{display:block;font-family:"Space Grotesk",sans-serif;font-size:16pt;white-space:nowrap;letter-spacing:-.02em;line-height:1}
+.proof small{display:block;font-size:8.5pt;color:rgba(255,255,255,.62);margin-top:1.8mm}
+h2{font-size:8.5pt;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#58C4DC;margin:7mm 0 3.5mm}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm 6mm}
+.grid div b{display:block;font-size:11pt;font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.grid div p{margin:1.4mm 0 0;font-size:9pt;line-height:1.4;color:rgba(255,255,255,.62)}
+.work{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm}
+.work div{border-left:.6mm solid #58C4DC;padding:.5mm 0 .5mm 4mm}
+.work b{display:block;font-size:11pt;font-weight:600;line-height:1.2}
+.work p{margin:1.4mm 0 0;font-size:9pt;line-height:1.4;color:rgba(255,255,255,.62)}
+.how{display:grid;grid-template-columns:1fr 1fr;gap:2.2mm 8mm;font-size:9.6pt;color:rgba(255,255,255,.8);line-height:1.4}
+.how li{list-style:none;position:relative;padding-left:5mm}
+.how li:before{content:"";position:absolute;left:0;top:1.9mm;width:2mm;height:2mm;border-radius:50%;background:#58C4DC}
+.how ul{margin:0;padding:0;display:contents}
+.cta{position:absolute;left:16mm;right:16mm;bottom:12mm;border-radius:3.5mm;padding:5.5mm 7mm;background:linear-gradient(135deg,rgba(8,126,164,.55),rgba(8,126,164,.18));border:.4mm solid rgba(88,196,220,.35);display:flex;justify-content:space-between;align-items:center;gap:8mm}
+.cta .t{font-family:"Space Grotesk",sans-serif;font-size:17pt;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.cta .d{font-size:9.6pt;color:rgba(255,255,255,.72);margin-top:1.8mm}
+.cta .c{text-align:right;font-size:10pt;line-height:1.75;white-space:nowrap}
+.cta .c b{font-weight:600;color:#fff}
+.cta .c span{color:rgba(255,255,255,.72)}
+</style></head><body>
+<div class="page">
+  <div class="g1"></div><div class="g2"></div><div class="g3"></div>
+  <img class="globe" src="GLOBE_SRC">
+  <div class="vig"></div>
+  <div class="in">
+    <div class="top"><img src="LOGO_SRC" alt="tasknify"><span>tasknify.com</span></div>
+    <div style="margin-top:10mm">
+      <div class="eyebrow">Software development agency · Remote · Clients worldwide</div>
+      <h1>Software Built<br>To Last</h1>
+      <div class="sub">Custom web and mobile apps for startups and growing businesses, from the first sketch to the App Store and beyond.</div>
+    </div>
+    <div class="proof">
+      <div><b>Fixed price</b><small>Written plan before work starts</small></div>
+      <div><b>Weekly</b><small>Staging link and written update</small></div>
+      <div><b>Yours</b><small>Code, accounts and data in your name</small></div>
+      <div><b>Same team</b><small>From first call to after launch</small></div>
+    </div>
+    <h2>What we build</h2>
+    <div class="grid">
+      <div><b>Web apps &amp; SaaS</b><p>React, Next.js and TypeScript products with real users and real billing.</p></div>
+      <div><b>iOS &amp; Android apps</b><p>React Native and Expo, taken all the way through App Review.</p></div>
+      <div><b>AI features that ship</b><p>RAG search, document Q&amp;A and LLM integrations in production.</p></div>
+      <div><b>Internal tools &amp; portals</b><p>Admin platforms, client portals and dashboards your team will use.</p></div>
+      <div><b>APIs &amp; integrations</b><p>Django, FastAPI and Node.js back ends, wired to the services you already run.</p></div>
+      <div><b>Cloud &amp; DevOps</b><p>AWS deployment with monitoring, staging and release pipelines.</p></div>
+    </div>
+    <h2>Recent work</h2>
+    <div class="work">
+      <div><b>Pepmax</b><p>Peptide dose tracker for iOS: calculator, dose log, subscriptions and push. Live on the App Store.</p></div>
+      <div><b>BoothIQ</b><p>Photo booth platform: booth software, web dashboard and a React Native app on one API.</p></div>
+      <div><b>Lift AI</b><p>Asset-management platform for the elevator industry: contracts, KPIs, compliance and insights.</p></div>
+    </div>
+    <h2>How we work</h2>
+    <div class="how"><ul>
+      <li>A dedicated team and a named project lead on every project. No hand-offs.</li>
+      <li>Tests, code review and a staging environment on every build.</li>
+      <li>Fixed-scope milestones or hourly, with a written plan before work starts.</li>
+      <li>Clear written updates in your time zone, and support after launch.</li>
+    </ul></div>
+  </div>
+  <div class="cta">
+    <div><div class="t">Have something that needs building properly?</div><div class="d">Tell us what you are working on. We reply within one business day.</div></div>
+    <div class="c"><b>tasknify.com</b><br><span>info@tasknify.com</span><br><span>+234 913 551 5251</span><br><span>Remote · Clients worldwide</span></div>
+  </div>
+</div>
+</body></html>

@@ -18,10 +18,25 @@ const paytoneOne = Paytone_One({
   variable: "--font-paytone",
 })
 
+const siteDescription =
+  "Tasknify is a premium software development agency. We engineer custom web apps, mobile platforms, cloud solutions, and APIs that scale with your business."
+
 export const metadata: Metadata = {
-  title: "Tasknify — Software Development Agency",
-  description:
-    "Tasknify is a premium software development agency. We engineer custom web apps, mobile platforms, cloud solutions, and APIs that scale with your business.",
+  metadataBase: new URL("https://tasknify.com"),
+  title: {
+    default: "Tasknify — Software Development Agency",
+    template: "%s — Tasknify",
+  },
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    url: "https://tasknify.com",
+    siteName: "Tasknify",
+    title: "Tasknify — Software Development Agency",
+    description: siteDescription,
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Tasknify — Software Development Agency" }],
+  },
+  twitter: { card: "summary_large_image", title: "Tasknify — Software Development Agency", description: siteDescription, images: ["/og.png"] },
 }
 
 export default function RootLayout({

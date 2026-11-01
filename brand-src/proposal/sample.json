@@ -1,0 +1,66 @@
+{
+  "ref": "TNF-2026-014",
+  "date": "21 October 2026",
+  "validUntil": "4 November 2026",
+  "title": "Customer portal and field-service app",
+  "client": { "company": "Northwind Facilities Ltd", "contact": "Alex Mensah, Operations Director", "location": "Manchester, United Kingdom" },
+  "summary": [
+    "Northwind manages maintenance contracts for 140 commercial buildings. Jobs are scheduled in spreadsheets, engineers report by WhatsApp, and clients phone the office to ask for updates. You told us the goal is one system where clients see the status of their jobs, engineers log work from their phones, and the office stops re-typing.",
+    "This proposal covers a web portal for your clients and office team, a mobile app for engineers, and the API that connects them, delivered in four milestones over ten weeks."
+  ],
+  "goals": [
+    "Clients can see every open and completed job for their buildings without calling the office",
+    "Engineers log attendance, photos and parts from their phone, online or offline",
+    "The office schedules jobs in one place and exports monthly reports per client",
+    "A foundation your team can extend: documented API, tests, and a staging environment"
+  ],
+  "deliverables": [
+    ["Client portal (web)", "Job list and detail per building, status timeline, photos, PDF job reports, user accounts with roles for client, office and admin."],
+    ["Office dashboard (web)", "Job scheduling calendar, engineer assignment, contract and SLA tracking, monthly report export (CSV and PDF)."],
+    ["Engineer app (iOS and Android)", "Today's jobs, check-in and check-out, photo capture, parts used, signature, offline queue that syncs when back online."],
+    ["API and database", "Django REST API with PostgreSQL, role-based permissions, audit log, email notifications on job status changes."],
+    ["Deployment and handover", "AWS hosting with staging and production, CI pipeline, monitoring, written documentation and a two-hour handover session."]
+  ],
+  "outOfScope": [
+    "Native payment collection or invoicing (can be scoped as a follow-on)",
+    "Migration of historic jobs older than 12 months",
+    "Custom branding per client beyond logo and colours"
+  ],
+  "phases": [
+    ["Discovery and design", "Week 1 to 2", "Workshops with the office team, data model, clickable prototype of the portal and app screens, written spec signed off before build."],
+    ["Portal and API", "Week 3 to 5", "API, database, authentication, client portal and office dashboard on staging for weekly review."],
+    ["Engineer app", "Week 6 to 8", "React Native app with offline sync, TestFlight and Play internal testing builds for your engineers to trial on real jobs."],
+    ["Launch and handover", "Week 9 to 10", "Data import, App Store and Play submission, production deployment, documentation and training."]
+  ],
+  "currency": "$",
+  "milestones": [
+    ["Milestone 1: Discovery, design and signed-off spec", "End of week 2", 2400],
+    ["Milestone 2: Portal, dashboard and API on staging", "End of week 5", 4200],
+    ["Milestone 3: Engineer app in testing", "End of week 8", 3600],
+    ["Milestone 4: Launch, documentation and handover", "End of week 10", 1800]
+  ],
+  "included": [
+    "A dedicated team and named project lead end to end, with written updates every week",
+    "Automated tests, code review and a staging environment",
+    "30 days of bug fixes after launch at no charge",
+    "Full source code and documentation, owned by you on final payment"
+  ],
+  "optional": [
+    ["Ongoing support and feature development", "From $1,200 per month, 20 hours"],
+    ["Invoicing and card payments in the client portal", "Quoted after discovery, estimate $2,500 to $3,500"]
+  ],
+  "terms": [
+    "The first milestone is invoiced on signing and starts the project. Each later milestone is invoiced on delivery and due within 7 days, by bank transfer or card.",
+    "Changes outside the agreed scope are estimated in writing before any work begins.",
+    "You own all source code, designs and data on payment of the final milestone. We keep the right to show the work in our portfolio unless agreed otherwise.",
+    "Third-party costs (hosting, app store accounts, SMS or email services) are paid directly by you.",
+    "This proposal is valid until the date on the cover. Timeline starts on receipt of the first milestone payment and the materials listed in the next steps."
+  ],
+  "nextSteps": [
+    "Reply with any questions or changes to scope",
+    "Approve the proposal by signing the acceptance page and paying the first milestone",
+    "Send access to your current spreadsheets and a sample client contract",
+    "We schedule the discovery workshop within 3 working days"
+  ],
+  "signatory": "God'Swill William, Founder"
+}

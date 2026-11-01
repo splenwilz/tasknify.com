@@ -9,24 +9,28 @@ import { ArrowUpRight, ArrowRight } from "lucide-react"
 const potentialCards = [
   {
     number: "01",
+    image: "/services/discovery.svg",
     title: "Technical Discovery",
     description:
       "We evaluate your existing systems, identify technical opportunities, and recommend solutions that align with your business objectives and growth trajectory.",
   },
   {
     number: "02",
+    image: "/services/architecture.svg",
     title: "Architecture Design",
     description:
       "We analyze your data models and system requirements to design scalable architectures that perform reliably across all platforms and environments.",
   },
   {
     number: "03",
+    image: "/services/quality.svg",
     title: "Quality Assurance",
     description:
       "We implement comprehensive testing strategies, including unit, integration, and E2E testing, to ensure reliability and build confidence in every release.",
   },
   {
     number: "04",
+    image: "/services/deployment.svg",
     title: "Deployment & Support",
     description:
       "We design and implement robust CI/CD pipelines, ensuring your team can ship, monitor, and roll back releases with confidence in minutes.",
@@ -175,18 +179,8 @@ export default function ServicesPage() {
                   <h3 className="text-xl font-bold text-white mb-4">
                     {card.title}
                   </h3>
-                  <div className="w-full aspect-[4/3] bg-white/5 rounded-xl mb-4 flex items-center justify-center">
-                    <svg
-                      viewBox="0 0 80 60"
-                      fill="none"
-                      className="w-16 h-12 opacity-30"
-                    >
-                      <rect x="5" y="5" width="70" height="50" rx="6" stroke="#00ffff" strokeWidth="1.5" />
-                      <circle cx="25" cy="25" r="8" stroke="#00ffff" strokeWidth="1" />
-                      <line x1="35" y1="20" x2="65" y2="20" stroke="#00ffff" strokeWidth="1" />
-                      <line x1="35" y1="30" x2="55" y2="30" stroke="#00ffff" strokeWidth="1" />
-                      <line x1="15" y1="42" x2="65" y2="42" stroke="#00ffff" strokeWidth="1" />
-                    </svg>
+                  <div className="w-full aspect-[4/3] rounded-xl mb-4 overflow-hidden border border-white/5">
+                    <img src={card.image} alt="" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
                   </div>
                   <p className="text-sm text-white/50 leading-relaxed mb-4 flex-1">
                     {card.description}

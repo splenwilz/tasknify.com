@@ -1,279 +1,108 @@
-import { CheckCircle, Clock, Users, Zap, Shield, Rocket } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import Link from "next/link"
-import { Metadata } from "next"
+import { RevealOnScroll } from "@/components/reveal-on-scroll"
 
 export const metadata: Metadata = {
-  title: "Our Development Process - Tasknify",
-  description: "Learn about Tasknify's proven 6-step development process. From discovery to deployment, we deliver high-quality software on time and within budget.",
+  title: "How We Work - Tasknify",
+  description: "Tasknify's development process: discovery and a written spec, design, a build you review weekly on staging, launch, and support after.",
 }
+
+const phases = [
+  { step: "01", title: "Discovery and written spec", when: "Week 1 to 2", text: "A call to understand the business problem, then a review of anything that already exists: code, spreadsheets, designs. You get a written spec, a data model and a milestone plan with a fixed price. Nothing is built until you sign it off.", points: ["Kickoff call and workshop", "Review of existing code and data", "Written scope, price and timeline"] },
+  { step: "02", title: "Design and prototype", when: "Week 2 to 3", text: "For products with real user interfaces, a clickable prototype of the key screens before any code, so the expensive decisions happen while they are still cheap to change. For internal tools and APIs this phase is short.", points: ["Clickable prototype of key screens", "Flows agreed with the people who will use them", "Design handed to the build with no gaps"] },
+  { step: "03", title: "Build, reviewed weekly", when: "Week 3 onwards", text: "The build runs in weekly increments. Every week you get a written update and a staging link where the new work is live. Automated tests and code review on every change, and a running list of open questions so nothing waits on a meeting.", points: ["Weekly written update", "Staging environment you can use", "Tests and code review on every change"] },
+  { step: "04", title: "Launch and handover", when: "Final 1 to 2 weeks", text: "Production deployment, app store submission where there is an app, data import, monitoring and backups. You get documentation, every account in your name, and a handover session with the team who built it.", points: ["Production deployment and store release", "Documentation and account handover", "Handover session, recorded"] },
+  { step: "05", title: "Support after launch", when: "Ongoing", text: "Fixed-price projects include 30 days of bug fixes. After that, a monthly retainer or hourly work for new features, with the same team who knows the codebase. Several clients have stayed on for more than a year.", points: ["30 days of bug fixes included", "Retainer or hourly for new work", "Same team, no re-learning"] },
+]
+
+const principles = [
+  ["One team, end to end", "The project lead on the discovery call stays with your project through the handover. No account manager in between, no hand-off to a different team."],
+  ["Written before built", "Scope, price, assumptions and changes are all in writing. A proposal that names what is not included saves arguments later."],
+  ["Staging before production", "You see every feature on a staging environment before it goes live, and you can try it, not just watch a demo."],
+  ["Your time zone", "Calls in your working hours, replies within one business day, updates you can read in two minutes."],
+]
 
 export default function ProcessPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#050505]">
       <Header />
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-            Our <span className="text-emerald-600 font-semibold">proven</span> development process
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-            From concept to deployment, we follow a battle-tested methodology that ensures your project is delivered on
-            time, within budget, and exceeds expectations.
-          </p>
-        </div>
-      </section>
-
-      {/* Process Steps */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Step 1 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                <Users className="w-6 h-6 text-blue-600" />
-              </div>
-              <div className="text-sm font-medium text-blue-600 mb-2">STEP 1</div>
-              <h3 className="text-xl font-bold text-[#0F172A] mb-4">Discovery & Planning</h3>
-              <p className="text-gray-600 mb-6">
-                We dive deep into your business requirements, technical constraints, and success metrics to create a
-                comprehensive project roadmap.
+      <main>
+        <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full bg-[#00ffff]/20 blur-[140px]" />
+          </div>
+          <div className="relative max-w-3xl mx-auto text-center">
+            <RevealOnScroll>
+              <span className="text-[#00ffff] text-xs font-medium tracking-[0.2em] uppercase">Process</span>
+              <h1 className="font-display text-4xl md:text-6xl text-white mt-4 mb-6">How a project runs</h1>
+              <p className="text-white/50 text-lg leading-relaxed">
+                Five phases, each with something you can read or click at the end of it. Most builds take six to twelve weeks from kickoff to launch.
               </p>
-              <div className="space-y-2">
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Requirements gathering
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Technical architecture design
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Project timeline & milestones
-                </div>
-              </div>
-            </div>
+            </RevealOnScroll>
+          </div>
+        </section>
 
-            {/* Step 2 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-purple-600" />
-              </div>
-              <div className="text-sm font-medium text-purple-600 mb-2">STEP 2</div>
-              <h3 className="text-xl font-bold text-[#0F172A] mb-4">Rapid Prototyping</h3>
-              <p className="text-gray-600 mb-6">
-                We build interactive prototypes and wireframes to validate concepts early, ensuring alignment before
-                development begins.
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Interactive mockups
+        <section className="px-4 sm:px-6 lg:px-8 pb-16">
+          <div className="max-w-5xl mx-auto space-y-6">
+            {phases.map((p) => (
+              <RevealOnScroll key={p.step}>
+                <div className="neon-card rounded-xl bg-[#0a0a0a] p-8 grid md:grid-cols-[140px_1fr] gap-6">
+                  <div>
+                    <div className="font-display text-4xl text-[#00ffff]">{p.step}</div>
+                    <div className="text-xs text-white/40 uppercase tracking-wider mt-2">{p.when}</div>
+                  </div>
+                  <div>
+                    <h2 className="text-white text-xl font-semibold mb-3">{p.title}</h2>
+                    <p className="text-white/60 leading-relaxed mb-5">{p.text}</p>
+                    <ul className="grid sm:grid-cols-3 gap-3">
+                      {p.points.map((pt) => (
+                        <li key={pt} className="flex items-start gap-2 text-sm text-white/70">
+                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00ffff] shrink-0" />
+                          {pt}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  User experience validation
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Stakeholder feedback integration
-                </div>
-              </div>
-            </div>
+              </RevealOnScroll>
+            ))}
+          </div>
+        </section>
 
-            {/* Step 3 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
-                <Clock className="w-6 h-6 text-emerald-600" />
-              </div>
-              <div className="text-sm font-medium text-emerald-600 mb-2">STEP 3</div>
-              <h3 className="text-xl font-bold text-[#0F172A] mb-4">Agile Development</h3>
-              <p className="text-gray-600 mb-6">
-                Using 2-week sprints, we deliver working software incrementally with regular demos and feedback sessions
-                to keep you involved.
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  2-week sprint cycles
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Regular demo sessions
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Continuous integration
-                </div>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-orange-600" />
-              </div>
-              <div className="text-sm font-medium text-orange-600 mb-2">STEP 4</div>
-              <h3 className="text-xl font-bold text-[#0F172A] mb-4">Quality Assurance</h3>
-              <p className="text-gray-600 mb-6">
-                Comprehensive testing across devices, browsers, and user scenarios ensures your application works
-                flawlessly for every user.
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Automated testing suite
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Cross-browser compatibility
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Performance optimization
-                </div>
-              </div>
-            </div>
-
-            {/* Step 5 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-                <Rocket className="w-6 h-6 text-red-600" />
-              </div>
-              <div className="text-sm font-medium text-red-600 mb-2">STEP 5</div>
-              <h3 className="text-xl font-bold text-[#0F172A] mb-4">Deployment & Launch</h3>
-              <p className="text-gray-600 mb-6">
-                We handle the entire deployment process, from server setup to domain configuration, ensuring a smooth
-                launch with zero downtime.
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Production deployment
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  SSL & security setup
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Monitoring & analytics
-                </div>
-              </div>
-            </div>
-
-            {/* Step 6 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
-                <Users className="w-6 h-6 text-indigo-600" />
-              </div>
-              <div className="text-sm font-medium text-indigo-600 mb-2">STEP 6</div>
-              <h3 className="text-xl font-bold text-[#0F172A] mb-4">Ongoing Support</h3>
-              <p className="text-gray-600 mb-6">
-                Post-launch support includes bug fixes, feature updates, and performance monitoring to keep your
-                application running smoothly.
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  30-day warranty period
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Maintenance packages
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
-                  Feature enhancement
-                </div>
-              </div>
+        <section className="px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-5xl mx-auto">
+            <RevealOnScroll>
+              <span className="text-[#00ffff] text-xs font-medium tracking-[0.2em] uppercase">Working together</span>
+              <h2 className="font-display text-3xl md:text-4xl text-white mt-3 mb-10">What stays the same on every project</h2>
+            </RevealOnScroll>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {principles.map(([t, d]) => (
+                <RevealOnScroll key={t}>
+                  <div className="neon-card rounded-xl bg-[#0a0a0a] p-6 h-full">
+                    <h3 className="text-white font-semibold mb-2">{t}</h3>
+                    <p className="text-white/50 text-sm leading-relaxed">{d}</p>
+                  </div>
+                </RevealOnScroll>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Timeline Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#0F172A] mb-4">Typical Project Timeline</h2>
-            <p className="text-gray-600">
-              Most projects follow this general timeline, though we adapt to your specific needs
-            </p>
+        <section className="px-4 sm:px-6 lg:px-8 py-24">
+          <div className="max-w-3xl mx-auto text-center">
+            <RevealOnScroll>
+              <h2 className="font-display text-3xl md:text-5xl text-white mb-6">Have something that needs building properly?</h2>
+              <p className="text-white/50 mb-8">Tell us what you are working on. The first call is with the project lead who would run it.</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/contact" className="px-6 py-3 rounded-full bg-[#00ffff] text-[#050505] font-medium hover:bg-[#00ffff] hover:text-[#050505] transition-colors">Start a project</Link>
+                <Link href="/case-studies" className="px-6 py-3 rounded-full border border-white/15 text-white/80 hover:text-white hover:border-white/40 transition-colors">See case studies</Link>
+              </div>
+            </RevealOnScroll>
           </div>
-
-          <div className="space-y-8">
-            <div className="flex items-center">
-              <div className="w-24 text-sm font-medium text-gray-500">Week 1-2</div>
-              <div className="flex-1 bg-blue-200 h-2 rounded-full mx-4">
-                <div className="bg-blue-600 h-2 rounded-full w-full"></div>
-              </div>
-              <div className="text-sm font-medium text-[#0F172A]">Discovery & Planning</div>
-            </div>
-
-            <div className="flex items-center">
-              <div className="w-24 text-sm font-medium text-gray-500">Week 3-4</div>
-              <div className="flex-1 bg-purple-200 h-2 rounded-full mx-4">
-                <div className="bg-purple-600 h-2 rounded-full w-full"></div>
-              </div>
-              <div className="text-sm font-medium text-[#0F172A]">Prototyping & Design</div>
-            </div>
-
-            <div className="flex items-center">
-              <div className="w-24 text-sm font-medium text-gray-500">Week 5-10</div>
-              <div className="flex-1 bg-emerald-200 h-2 rounded-full mx-4">
-                <div className="bg-emerald-600 h-2 rounded-full w-full"></div>
-              </div>
-              <div className="text-sm font-medium text-[#0F172A]">Development Sprints</div>
-            </div>
-
-            <div className="flex items-center">
-              <div className="w-24 text-sm font-medium text-gray-500">Week 11-12</div>
-              <div className="flex-1 bg-orange-200 h-2 rounded-full mx-4">
-                <div className="bg-orange-600 h-2 rounded-full w-full"></div>
-              </div>
-              <div className="text-sm font-medium text-[#0F172A]">Testing & QA</div>
-            </div>
-
-            <div className="flex items-center">
-              <div className="w-24 text-sm font-medium text-gray-500">Week 13</div>
-              <div className="flex-1 bg-red-200 h-2 rounded-full mx-4">
-                <div className="bg-red-600 h-2 rounded-full w-full"></div>
-              </div>
-              <div className="text-sm font-medium text-[#0F172A]">Deployment & Launch</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#0F172A]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to start your project?</h2>
-          <p className="text-gray-300 mb-8 text-lg">
-            Let's discuss your requirements and create a custom development plan that fits your timeline and budget.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button className="bg-white text-[#0F172A] hover:bg-gray-100 rounded-full px-8 py-3">
-                Start Your Project
-              </Button>
-            </Link>
-            <Link href="/case-studies">
-              <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#0F172A] rounded-full px-8 py-3 bg-transparent"
-              >
-                View Case Studies
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
       <Footer />
     </div>
   )
