@@ -131,6 +131,12 @@ export function Footer() {
                 <Link href="/client-files" className="text-white/50 hover:text-white text-sm transition-colors">
                   Client Files
                 </Link>
+                <Link href="/privacy" className="text-white/50 hover:text-white text-sm transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-white/50 hover:text-white text-sm transition-colors">
+                  Terms of Service
+                </Link>
               </nav>
             </div>
           </div>

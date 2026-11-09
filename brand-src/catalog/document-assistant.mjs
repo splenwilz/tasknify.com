@@ -1,0 +1,37 @@
+// Upwork catalog: "You will get AI chat that answers questions from your own documents"
+export const slides = [
+  { id: "cover", type: "cover", eyebrow: "AI document assistant",
+    h: "Ask your documents.\nGet answers with sources.",
+    sub: "An AI chat that reads your PDFs, contracts and policies and answers in plain English, with a link to the exact source.",
+    chat: { title: "Contracts assistant", q: "What is the notice period to end the Acme agreement?",
+      a: "90 days' written notice, by either party. Notice must be sent to the addresses in Schedule A.",
+      source: "Acme_MSA_2024.pdf · page 12 · clause 14.2", placeholder: "Ask a question about your documents" } },
+  { id: "how", type: "steps", eyebrow: "How it works", h: "From a folder of files to answers in seconds",
+    steps: [
+      { t: "Connect your documents", d: "PDFs, Word files, web pages or a database. Thousands of pages are fine." },
+      { t: "Indexed privately", d: "Documents are split, embedded and stored in a vector database inside your own accounts." },
+      { t: "Answers with sources", d: "Every answer quotes the passage it came from, so anyone can check it in one click." },
+    ] },
+  { id: "get", type: "list", eyebrow: "What you get", h: "Answers your team can trust", sub: "Every piece is built so an answer can be checked, not just believed.",
+    items: [
+      { t: "Grounded in your documents", d: "Answers come from your files, not from the model's imagination." },
+      { t: "A source link on every answer", d: "File, page and section, so anyone can verify it." },
+      { t: "Works with PDFs, Word, web pages or your database" },
+      { t: "Private by design", d: "Your data stays in your accounts. Nothing is used to train anyone's model." },
+      { t: "Clean handover", d: "Documentation and a walkthrough, so your team can run it without me." },
+    ] },
+  { id: "stack", type: "stack", eyebrow: "Built with", h: "Proven tools, deployed where you already are",
+    chipsLabel: "Stack", chips: ["Python", "LangChain", "OpenAI or Claude", "Vector database (RAG)", "AWS or your hosting"],
+    inputsLabel: "Sources it can read", inputs: ["PDF", "Word", "Web pages", "Notion / Confluence", "SQL database"],
+    panel: { t: "Your data stays yours", d: "Keys, storage and the index live in accounts you own. You can revoke access at any time." } },
+  { id: "proof", type: "proof", eyebrow: "Built before", h: "Proven on a live contract platform",
+    sub: "For Lift AI, clients ask questions across their own contracts and get answers in seconds. Same approach, built around your data.",
+    stats: [{ v: "7 mo", l: "embedded with the team" }, { v: "Seconds", l: "to an answer with its source" }],
+    image: "public/case-studies/lift-ai/01-cover.jpg", caption: "Lift AI asset-management platform. Case study at tasknify.com" },
+  { id: "tiers", type: "tiers", eyebrow: "Pricing", h: "Three ways to start",
+    tiers: [
+      { name: "Starter", price: "$750", time: "5 days · 1 revision", points: ["Proof of concept on up to 50 documents", "Simple chat page", "Short report on accuracy and next steps"] },
+      { name: "Standard", price: "$2,500", time: "14 days · 2 revisions", featured: "Most popular", points: ["Production assistant on up to 1,000 documents", "Source links on every answer", "Chat interface and deployment", "Handover call"] },
+      { name: "Advanced", price: "$6,000", time: "30 days · 3 revisions", points: ["Built into your existing app or platform", "User logins and per-user permissions", "Automatic syncing of new documents", "Usage monitoring"] },
+    ] },
+]
